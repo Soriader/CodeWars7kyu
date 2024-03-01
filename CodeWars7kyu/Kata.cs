@@ -8,7 +8,19 @@ namespace CodeWars7kyu
 {
     public static class Kata
     {
+        public static string ReverseWords(string str)
+        {
+            string[] words = str.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                char[] charArray = words[i].ToCharArray();
+                Array.Reverse(charArray);
+                words[i] = new string(charArray);
+            }
+            return string.Join(" ", words);
 
+            //https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/csharp
+        }
         public static IEnumerable<string> FriendOrFoe(string[] names)
         {
             List<string> friendsList = new List<string>();

@@ -9,6 +9,12 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public void ReverseWordsTest()
+            {
+                Assert.AreEqual("sihT si na !elpmaxe", Kata.ReverseWords("This is an example!"));
+            }
+
+            [Test]
             public void FriendOrFoeTest()
             {
                 string[] expected = { "Ryan", "Mark" };
