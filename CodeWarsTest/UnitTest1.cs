@@ -1,4 +1,5 @@
 using CodeWars7kyu;
+using System.Reflection;
 
 namespace CodeWarsTest
 {
@@ -8,6 +9,12 @@ namespace CodeWarsTest
         [TestFixture]
         public class KataTest
         {
+            [Test]
+            public static void PrinterErrorTest()
+            {
+                Assert.AreEqual("3/56", Kata.PrinterError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));
+            }
+
             [Test]
             public void IsIsogramTest()
             {

@@ -8,6 +8,25 @@ namespace CodeWars7kyu
 {
     public static class Kata
     {
+        public static string PrinterError(string s)
+        {
+            var total = 0;
+            var errors = 0;
+
+            foreach (var c in s.ToArray())
+            {
+                total += 1;
+
+                if (c > 'm')
+                {
+                    errors += 1;
+                }
+            }
+
+            return $"{errors}/{total}";
+
+            //https://www.codewars.com/kata/56541980fa08ab47a0000040/train/csharp
+        }
 
         public static bool IsIsogram(string str)
         {
@@ -30,7 +49,6 @@ namespace CodeWars7kyu
 
             //https://www.codewars.com/kata/54ba84be607a92aa900000f1/train/csharp
         }
-
         public static String Accum(string s)
         {
             string result = "";
