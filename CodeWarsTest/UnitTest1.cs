@@ -9,6 +9,13 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public static void AccumTest()
+            {
+                Assert.AreEqual("N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb", Kata.Accum("NyffsGeyylB"));
+                Assert.AreEqual("M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu", Kata.Accum("MjtkuBovqrU"));
+                Assert.AreEqual("E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm", Kata.Accum("EvidjUnokmM"));
+            }
+            [Test]
             public void ReverseWordsTest()
             {
                 Assert.AreEqual("sihT si na !elpmaxe", Kata.ReverseWords("This is an example!"));
