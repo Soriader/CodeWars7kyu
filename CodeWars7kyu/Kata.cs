@@ -8,6 +8,29 @@ namespace CodeWars7kyu
 {
     public static class Kata
     {
+
+        public static bool IsIsogram(string str)
+        {
+            var chars = str.ToLower().ToCharArray();
+            var hash = new HashSet<char>();
+
+            foreach (var c in chars)
+            {
+                if (hash.Contains(c))
+                {
+                    return false;
+                }
+                else
+                {
+                    hash.Add(c);
+                }
+            }
+
+            return true;
+
+            //https://www.codewars.com/kata/54ba84be607a92aa900000f1/train/csharp
+        }
+
         public static String Accum(string s)
         {
             string result = "";

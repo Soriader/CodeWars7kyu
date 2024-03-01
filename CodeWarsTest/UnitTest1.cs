@@ -9,6 +9,15 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public void IsIsogramTest()
+            {
+                Assert.AreEqual(expected: true, actual: Kata.IsIsogram("Dermatoglyphics"));
+                Assert.AreEqual(expected: true, actual: Kata.IsIsogram("isogram"));
+                Assert.AreEqual(expected: false, actual: Kata.IsIsogram("moose"));
+                Assert.AreEqual(expected: false, actual: Kata.IsIsogram("isIsogram"));
+            }
+
+            [Test]
             public static void AccumTest()
             {
                 Assert.AreEqual("N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb", Kata.Accum("NyffsGeyylB"));
