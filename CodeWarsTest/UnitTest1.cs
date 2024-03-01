@@ -8,7 +8,13 @@ namespace CodeWarsTest
         [TestFixture]
         public class KataTest
         {
-
+            [Test]
+            public void FriendOrFoeTest()
+            {
+                string[] expected = { "Ryan", "Mark" };
+                string[] names = { "Ryan", "Kieran", "Mark", "Jimmy" };
+                CollectionAssert.AreEqual(expected, Kata.FriendOrFoe(names));
+            }
             [Test]
             public void MakeComplementTest()
             {
