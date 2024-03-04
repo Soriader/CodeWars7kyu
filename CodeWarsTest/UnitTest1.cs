@@ -9,6 +9,11 @@ namespace CodeWarsTest
         [TestFixture]
         public class KataTest
         {
+            [Test]
+            public void VowelCountTest()
+            {
+                Assert.AreEqual(5, VowelCountTask.GetVowelCount("abracadabra"));
+            }
 
             [Test]
             public static void MinMaxTest()
