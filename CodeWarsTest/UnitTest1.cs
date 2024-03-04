@@ -11,6 +11,12 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public void IsTriangleTest()
+            {
+                Assert.IsTrue(IsTriangleTask.IsTriangle(5, 7, 10));
+            }
+
+            [Test]
             public void CategorizeNewMemberTest()
             {
                 Assert.AreEqual(new[] { "Open", "Senior", "Open", "Senior" }, CategorizeNewMemberTask.OpenOrSenior(new[] { new[] { 45, 12 }, new[] { 55, 21 }, new[] { 19, 2 }, new[] { 104, 20 } }));
