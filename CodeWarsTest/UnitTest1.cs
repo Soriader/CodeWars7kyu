@@ -10,6 +10,14 @@ namespace CodeWarsTest
         [TestFixture]
         public class KataTest
         {
+            [Test]
+            public void GetTheMiddleCharacterTest()
+            {
+                Assert.AreEqual("es", GetTheMiddleCharacterTask.GetMiddle("test"));
+                Assert.AreEqual("t", GetTheMiddleCharacterTask.GetMiddle("testing"));
+                Assert.AreEqual("dd", GetTheMiddleCharacterTask.GetMiddle("middle"));
+                Assert.AreEqual("A", GetTheMiddleCharacterTask.GetMiddle("A"));
+            }
 
             [Test]
             public void StringEndsWithTest()
