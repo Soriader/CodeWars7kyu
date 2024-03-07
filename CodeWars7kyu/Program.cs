@@ -6,22 +6,6 @@
         {
 
         }
-        public static int binaryArrayToNumber(int[] BinaryArray)
-        {
-            int result = 0;
 
-            for (int i = 0; i < BinaryArray.Length; i++)
-            {
-                if (BinaryArray[i] == 1)
-                {
-                    result += (int)Math.Pow(2, BinaryArray.Length - 1 - i);
-                }
-
-            }
-
-
-            return result;
-        }
     }
 }
-//https://www.codewars.com/kata/578553c3a1b8d5c40300037c/train/csharp
