@@ -1,11 +1,13 @@
-﻿namespace CodeWars7kyu
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        }
+namespace CodeWars7kyu
+{
+    public class OnesAndZerosTask
+    {
         public static int binaryArrayToNumber(int[] BinaryArray)
         {
             int result = 0;
@@ -24,4 +26,3 @@
         }
     }
 }
-//https://www.codewars.com/kata/578553c3a1b8d5c40300037c/train/csharp
