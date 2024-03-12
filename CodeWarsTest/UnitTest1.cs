@@ -11,6 +11,14 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public void SumOfNumbersInSequenceTest()
+            {
+                Assert.AreEqual(1, SumOfNumbersInSequenceTask.GetSum(0, 1));
+                Assert.AreEqual(-1, SumOfNumbersInSequenceTask.GetSum(0, -1));
+            }
+
+
+            [Test]
             public void FindTheStrayNumberTest()
             {
                 Assert.AreEqual(2, FindTheStrayNumberTask.Stray(new int[] { 1, 1, 2 }));
