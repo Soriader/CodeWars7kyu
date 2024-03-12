@@ -11,6 +11,15 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public void ListFilteringTest()
+            {
+                var list = new List<object>() { 1, 2, "a", "b" };
+                var expected = new List<int>() { 1, 2 };
+                var actual = ListFilteringTask.GetIntegersFromList(list);
+                Assert.IsTrue(expected.SequenceEqual(actual));
+            }
+
+            [Test]
             public static void GrowthOfAPopulationTest()
             {
                 Assert.AreEqual(15, GrowthOfAPopulationTask.NbYear(1500, 5, 100, 5000));
