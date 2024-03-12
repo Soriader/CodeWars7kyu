@@ -11,6 +11,12 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public void FindTheStrayNumberTest()
+            {
+                Assert.AreEqual(2, FindTheStrayNumberTask.Stray(new int[] { 1, 1, 2 }));
+            }
+
+            [Test]
             public void ListFilteringTest()
             {
                 var list = new List<object>() { 1, 2, "a", "b" };
