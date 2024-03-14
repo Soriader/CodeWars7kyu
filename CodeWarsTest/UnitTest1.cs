@@ -11,6 +11,14 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public static void test1()
+            {
+                Assert.AreEqual("aehrsty", TwoToOneSortedStringTask.Longest("aretheyhere", "yestheyarehere"));
+                Assert.AreEqual("abcdefghilnoprstu", TwoToOneSortedStringTask.Longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
+                Assert.AreEqual("acefghilmnoprstuy", TwoToOneSortedStringTask.Longest("inmanylanguages", "theresapairoffunctions"));
+            }
+
+            [Test]
             public void SumOfNumbersInSequenceTest()
             {
                 Assert.AreEqual(1, SumOfNumbersInSequenceTask.GetSum(0, 1));
