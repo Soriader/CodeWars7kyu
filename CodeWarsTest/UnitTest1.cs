@@ -13,6 +13,14 @@ namespace CodeWarsTest
         {
 
             [Test]
+            public void MoneyTest()
+            {
+                Assert.AreEqual(0, MoneyTask.CalculateYears(1000, 0.05, 0.18, 1000));
+                Assert.AreEqual(14, MoneyTask.CalculateYears(1000, 0.01625, 0.18, 1200));
+
+            }
+
+            [Test]
             public void SortNumbersTest()
             {
                 Assert.AreEqual(new int[] { 1, 2, 3, 5, 10 }, SortNumbersTask.SortNumbers(new int[] { 1, 2, 3, 10, 5 }));
