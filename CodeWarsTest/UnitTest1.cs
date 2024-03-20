@@ -11,6 +11,13 @@ namespace CodeWarsTest
         [TestFixture]
         public class KataTest
         {
+            [Test]
+            public void SquareEveryDigitTest()
+            {
+                Assert.AreEqual(811181, SquareEveryDigitTask.SquareDigits(9119));
+                Assert.AreEqual(0, SquareEveryDigitTask.SquareDigits(0));
+            }
+
 
             [Test]
             public void MoneyTest()
