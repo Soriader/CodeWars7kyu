@@ -12,6 +12,11 @@ namespace CodeWarsTest
         public class KataTest
         {
             [Test]
+            public void JadenCasingStringTest()
+            {
+                Assert.AreEqual("How Can Mirrors Be Real If Our Eyes Aren't Real", JadenCasingStringTask.ToJadenCase("How can mirrors be real if our eyes aren't real"));
+            }
+            [Test]
             public void SmallEnoughTest()
             {
                 Assert.AreEqual(true, SmallEnoughTask.SmallEnough(new int[] { 66, 101 }, 200));
