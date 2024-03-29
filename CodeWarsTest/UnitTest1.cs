@@ -11,6 +11,14 @@ namespace CodeWarsTest
         [TestFixture]
         public class KataTest
         {
+            [Test]
+            public void FactorialTest()
+            {
+                Assert.AreEqual(1, FactorialTask.Factorial(0));
+                Assert.AreEqual(1, FactorialTask.Factorial(1));
+                Assert.AreEqual(2, FactorialTask.Factorial(2));
+                Assert.AreEqual(6, FactorialTask.Factorial(3));
+            }
 
             [Test]
             public void CheckTheExamTest()
@@ -97,7 +105,7 @@ namespace CodeWarsTest
             }
 
             [Test]
-            public static void test1()
+            public static void TwoToOneSortedStringTest()
             {
                 Assert.AreEqual("aehrsty", TwoToOneSortedStringTask.Longest("aretheyhere", "yestheyarehere"));
                 Assert.AreEqual("abcdefghilnoprstu", TwoToOneSortedStringTask.Longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
