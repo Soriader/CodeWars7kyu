@@ -15,6 +15,16 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void FixStringCaseTest()
+                {
+                    Assert.AreEqual("code", FixStringCaseTask.Solve("code"));
+                    Assert.AreEqual("CODE", FixStringCaseTask.Solve("CODe"));
+                    Assert.AreEqual("code", FixStringCaseTask.Solve("COde"));
+                    Assert.AreEqual("code", FixStringCaseTask.Solve("Code"));
+
+                }
+
+                [Test]
                 public void FormTheMinimumTest()
                 {
                     Assert.AreEqual(13, FormTheMinimumTask.MinValue(new int[] { 1, 3, 1 }));
