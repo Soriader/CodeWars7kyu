@@ -16,6 +16,14 @@ namespace CodeWarsTest
             {
 
                 [Test]
+                public void ShortestWordTest()
+                {
+                    Assert.AreEqual(3, ShortestWordTask.FindShort("bitcoin take over the world maybe who knows perhaps"));
+                    Assert.AreEqual(3, ShortestWordTask.FindShort("turns out random test cases are easier than writing out basic ones"));
+                    Assert.AreEqual(2, ShortestWordTask.FindShort("Let's travel abroad shall we"));
+                }
+
+                [Test]
                 public void AlternateCapitalizationTest()
                 {
                     Assert.AreEqual(new string[2] { "AbCdEf", "aBcDeF" }, AlternateCapitalizationTask.Capitalize("abcdef"));
