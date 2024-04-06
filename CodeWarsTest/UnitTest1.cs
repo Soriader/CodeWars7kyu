@@ -15,6 +15,21 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void SumOfASequenceTest()
+                {
+                    Assert.AreEqual(12, SumOfASequenceTask.SequenceSum(2, 6, 2));
+                    Assert.AreEqual(15, SumOfASequenceTask.SequenceSum(1, 5, 1));
+                    Assert.AreEqual(5, SumOfASequenceTask.SequenceSum(1, 5, 3));
+                    Assert.AreEqual(45, SumOfASequenceTask.SequenceSum(0, 15, 3));
+                    Assert.AreEqual(0, SumOfASequenceTask.SequenceSum(16, 15, 3));
+                    Assert.AreEqual(26, SumOfASequenceTask.SequenceSum(2, 24, 22));
+                    Assert.AreEqual(2, SumOfASequenceTask.SequenceSum(2, 2, 2));
+                    Assert.AreEqual(2, SumOfASequenceTask.SequenceSum(2, 2, 1));
+                    Assert.AreEqual(35, SumOfASequenceTask.SequenceSum(1, 15, 3));
+                    Assert.AreEqual(0, SumOfASequenceTask.SequenceSum(15, 1, 3));
+                }
+
+                [Test]
                 public void SumOfMinimumsTest()
                 {
                     Assert.AreEqual(26, SumOfMinimumsTask.SumOfMinimums(new int[3, 5] { { 1, 2, 3, 4, 5 }, { 5, 6, 7, 8, 9 }, { 20, 21, 34, 56, 100 } }));
