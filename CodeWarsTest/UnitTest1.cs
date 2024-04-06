@@ -15,6 +15,13 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void SumOfAnglesTest()
+                {
+                    Assert.AreEqual(180, SumOfAnglesTask.Angle(3));
+                    Assert.AreEqual(360, SumOfAnglesTask.Angle(4));
+                }
+
+                [Test]
                 public void SumOfASequenceTest()
                 {
                     Assert.AreEqual(12, SumOfASequenceTask.SequenceSum(2, 6, 2));
