@@ -14,6 +14,13 @@ namespace CodeWarsTest
             
             public class Tests
             {
+
+                [Test]
+                public void FindTheCapitalsTest()
+                {
+                    Assert.AreEqual(FindTheCapitalsTask.Capitals("CodEWaRs"), new int[] { 0, 3, 4, 6 });
+                }
+
                 [Test]
                 public void SumOfAnglesTest()
                 {
