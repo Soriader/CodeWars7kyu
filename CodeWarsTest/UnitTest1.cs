@@ -16,6 +16,19 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void ReverseLetterTest()
+                {
+                    Assert.AreEqual("nahsirk", ReverseLetterTask.ReverseLetter("krishan"));
+
+                    Assert.AreEqual("nortlu", ReverseLetterTask.ReverseLetter("ultr53o?n"));
+
+                    Assert.AreEqual("cba", ReverseLetterTask.ReverseLetter("ab23c"));
+
+                    Assert.AreEqual("nahsirk", ReverseLetterTask.ReverseLetter("krish21an"));
+
+                }
+
+                [Test]
                 public void MultipleOf5Test()
                 {
                     Assert.AreEqual(0, MultipleOf5Task.RoundToNext5(0));
