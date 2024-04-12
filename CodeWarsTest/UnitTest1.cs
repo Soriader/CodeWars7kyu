@@ -16,6 +16,14 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public static void TheCouponCodeTest()
+                {
+                    Assert.AreEqual(true, TheCouponCodeTask.CheckCoupon("123", "123", "September 5, 2014", "October 1, 2014"));
+                    Assert.AreEqual(false, TheCouponCodeTask.CheckCoupon("123a", "123", "September 5, 2014", "October 1, 2014"));
+
+                }
+
+                [Test]
                 public void SortedYesOrNoTest()
                 {
                     Assert.AreEqual("yes, ascending", SortedYesOrNoTask.IsSortedAndHow(new[] { 1, 2 }));
