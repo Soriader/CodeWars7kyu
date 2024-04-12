@@ -16,6 +16,14 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void SortedYesOrNoTest()
+                {
+                    Assert.AreEqual("yes, ascending", SortedYesOrNoTask.IsSortedAndHow(new[] { 1, 2 }));
+                    Assert.AreEqual("yes, descending", SortedYesOrNoTask.IsSortedAndHow(new[] { 15, 7, 3, -8 }));
+                    Assert.AreEqual("no", SortedYesOrNoTask.IsSortedAndHow(new[] { 4, 2, 30 }));
+                }
+
+                [Test]
                 public void RowSumOddNumbersTest()
                 {
                     Assert.AreEqual(1, SumOfOddNumbersTask.RowSumOddNumbers(1));
