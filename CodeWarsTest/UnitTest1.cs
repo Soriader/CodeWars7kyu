@@ -16,6 +16,14 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void PartridgeWatchTest()
+                {
+                    Assert.AreEqual("Mine's a Pint!", PartridgeWatchTask.Part(new String[] { "Grouse", "Partridge", "Pheasant" }));
+                    Assert.AreEqual("Mine's a Pint!!!!!!!!", PartridgeWatchTask.Part(new String[] { "Grouse", "Partridge", "Pheasant", "Goose", "Starling", "Robin", "Thrush", "Emu", "PearTree", "Chat", "Dan", "Square", "Toblerone", "Lynn", "AlphaPapa", "BMW", "Graham", "Tool", "Nomad", "Finger", "Hamster" }));
+                    Assert.AreEqual("Lynn, I've pierced my foot on a spike!!", PartridgeWatchTask.Part(new string[] { "Pheasant", "Goose", "Starling", "Robin" }));
+                }
+
+                [Test]
                 public static void TheCouponCodeTest()
                 {
                     Assert.AreEqual(true, TheCouponCodeTask.CheckCoupon("123", "123", "September 5, 2014", "October 1, 2014"));

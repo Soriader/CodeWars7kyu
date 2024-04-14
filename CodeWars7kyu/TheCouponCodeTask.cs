@@ -18,7 +18,6 @@ namespace CodeWars7kyu
 
             return correctCoupon && notExpired;
 
-
         }
     }
 }
