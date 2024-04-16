@@ -16,6 +16,16 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void AnagramDetectionTest()
+                {
+                    Assert.AreEqual(true, AnagramDetectionTask.IsAnagram("foefet", "toffee"));
+                    Assert.AreEqual(true, AnagramDetectionTask.IsAnagram("Buckethead", "DeathCubeK"));
+                    Assert.AreEqual(true, AnagramDetectionTask.IsAnagram("Twoo", "Woot"));
+                    Assert.AreEqual(false, AnagramDetectionTask.IsAnagram("apple", "pale"));
+
+                }
+
+                [Test]
                 public void PartridgeWatchTest()
                 {
                     Assert.AreEqual("Mine's a Pint!", PartridgeWatchTask.Part(new String[] { "Grouse", "Partridge", "Pheasant" }));
