@@ -16,6 +16,15 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void BumpsInTheRoadTest()
+                {
+                    Assert.AreEqual("Woohoo!", BumpsInTheRoadTask.Bump("n"));
+                    Assert.AreEqual("Woohoo!", BumpsInTheRoadTask.Bump("nnn_n__n_n___nnnnn___n__nnn__"));
+                    Assert.AreEqual("Car Dead", BumpsInTheRoadTask.Bump("_nnnnnnn_n__n______nn__nn_nnn"));
+                    Assert.AreEqual("Car Dead", BumpsInTheRoadTask.Bump("nnnn____nnnnnn___nnnnnnnn_____nnnnnnn"));
+
+                }
+                [Test]
                 public void JavaScriptArrayFilterTest()
                 {
                     Assert.AreEqual(new int[] { 2 }, JavaScriptArrayFilterTask.GetEvenNumbers(new int[] { 1, 2 }));
