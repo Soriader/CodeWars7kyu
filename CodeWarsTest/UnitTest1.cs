@@ -12,9 +12,13 @@ namespace CodeWarsTest
         [TestFixture]
         public class KataTest
         {
-            
             public class Tests
             {
+                [Test]
+                public void NoOdditiesHereTest()
+                {
+                    Assert.AreEqual(new int[] { 2, 4 }, NoOdditiesHereTask.NoOdds(new int[] { 1, 2, 3, 4, 5 }));
+                }
                 [Test]
                 public void BumpsInTheRoadTest()
                 {
