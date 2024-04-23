@@ -14,6 +14,16 @@ namespace CodeWarsTest
         {
             public class Tests
             {
+
+                [Test]
+                public void PowerOfTwoTest()
+                {
+                    Assert.AreEqual(true, PowerOfTwoTask.PowerOfTwo(4096));
+                    Assert.AreEqual(true, PowerOfTwoTask.PowerOfTwo(2));
+                    Assert.AreEqual(false, PowerOfTwoTask.PowerOfTwo(9));
+
+                }
+
                 [Test]
                 public void SumofNumbersFrom0ToNTest()
                 {
