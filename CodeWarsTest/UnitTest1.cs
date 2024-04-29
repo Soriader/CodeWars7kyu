@@ -15,6 +15,11 @@ namespace CodeWarsTest
 			public class Tests
             {
 				[Test]
+				public void DeodorantEvaporatorTest()
+				{
+					Assert.AreEqual(22, DeodorantEvaporatorTask.Evaporator(10, 10, 10));
+				}
+				[Test]
 				public void BuildASquareTest()
 				{
 					Assert.AreEqual("", BuildASquareTask.GenerateShape(0));
