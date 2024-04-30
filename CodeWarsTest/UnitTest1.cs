@@ -14,7 +14,15 @@ namespace CodeWarsTest
         {
 			public class Tests
             {
-				[Test]
+                [Test]
+                public void OddOrEvenTest()
+                {
+                    Assert.AreEqual("even", OddOrEvenTask.OddOrEven(new int[] { 0 }));
+                    Assert.AreEqual("odd", OddOrEvenTask.OddOrEven(new int[] { 1 }));
+                    Assert.AreEqual("even", OddOrEvenTask.OddOrEven(new int[] { }));
+                }
+
+                [Test]
 				public void DeodorantEvaporatorTest()
 				{
 					Assert.AreEqual(22, DeodorantEvaporatorTask.Evaporator(10, 10, 10));
