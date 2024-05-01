@@ -2,6 +2,7 @@ using CodeWars7kyu;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System;
 using System.Reflection;
+using System.Text;
 using static CodeWars7kyu.DisemvowelTrollsTask;
 
 namespace CodeWarsTest
@@ -14,6 +15,23 @@ namespace CodeWarsTest
         {
 			public class Tests
             {
+                [Test]
+                public static void PartsOfAListTest()
+                {
+                    String[] s1 = new String[] { "cdIw", "tzIy", "xDu", "rThG" };
+                    string[][] expected = new string[][] 
+                    {
+    
+                        new string[] { "cdIw", "tzIy xDu rThG" },
+    
+                        new string[] { "cdIw tzIy", "xDu rThG" },
+    
+                        new string[] { "cdIw tzIy xDu", "rThG" }
+
+                    };
+                    CollectionAssert.AreEqual(expected, PartsOfAListTask.Partlist(s1));
+                }
+
                 [Test]
                 public void LargestPairSumInArrayTest()
                 {
