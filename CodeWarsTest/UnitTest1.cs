@@ -16,6 +16,14 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void SwitcherooTest()
+                {
+                    Assert.AreEqual("bac", SwitcherooTask.Switcheroo("abc"));
+                    Assert.AreEqual("bbbacccabbb", SwitcherooTask.Switcheroo("aaabcccbaaa"));
+                    Assert.AreEqual("ccccc", SwitcherooTask.Switcheroo("ccccc"));
+                }
+
+                [Test]
                 public static void PartsOfAListTest()
                 {
                     String[] s1 = new String[] { "cdIw", "tzIy", "xDu", "rThG" };
