@@ -16,6 +16,13 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void ConvertAnArrayOfStringsToArrayOfNumbersTest()
+                {
+                    Assert.AreEqual(new double[] { 1.1, 2.2, 3.3 }, ConvertAnArrayOfStringsToArrayOfNumbersTask.ToDoubleArray(new string[] { "1.1", "2.2", "3.3" }));
+
+                }
+
+                [Test]
                 public void SwitcherooTest()
                 {
                     Assert.AreEqual("bac", SwitcherooTask.Switcheroo("abc"));
