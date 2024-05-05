@@ -16,6 +16,14 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public static void FilterTheNumberTest()
+                {
+                    Assert.AreEqual(123, FilterTheNumberTask.FilterString("123"), "Just return the numbers");
+                    Assert.AreEqual(123, FilterTheNumberTask.FilterString("a1b2c3"), "Just return the numbers");
+                    Assert.AreEqual(123, FilterTheNumberTask.FilterString("aa1bb2cc3dd"), "Just return the numbers");
+                }
+
+                [Test]
                 public void NumberOfDecimalDigitsTest()
                 {
                     Assert.AreEqual(1, NumberOfDecimalDigitsTask.Digits(5ul));
