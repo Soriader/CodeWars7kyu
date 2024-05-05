@@ -16,6 +16,13 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void NumberOfDecimalDigitsTest()
+                {
+                    Assert.AreEqual(1, NumberOfDecimalDigitsTask.Digits(5ul));
+                    Assert.AreEqual(5, NumberOfDecimalDigitsTask.Digits(12345ul));
+                    Assert.AreEqual(10, NumberOfDecimalDigitsTask.Digits(9876543210ul));
+                }
+                [Test]
                 public void SimpleBeadsCountTest()
                 {
                     Assert.That(SimpleBeadsCountTask.CountRedBeads(0), Is.EqualTo(0));
