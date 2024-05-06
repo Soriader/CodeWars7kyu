@@ -15,6 +15,14 @@ namespace CodeWarsTest
         {
 			public class Tests
             {
+
+                [Test]
+                public void GreetMeTest()
+                {
+                    Assert.That(GreetMeTask.Greet("riley"), Is.EqualTo("Hello Riley!"));
+                    Assert.That(GreetMeTask.Greet("DaRO"), Is.EqualTo("Hello Daro!"));
+                }
+
                 [Test]
                 public static void FilterTheNumberTest()
                 {
