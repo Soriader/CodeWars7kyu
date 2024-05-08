@@ -16,6 +16,16 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void MaxDiffEasyTest()
+                {
+                    Assert.AreEqual(6, MaxDiffEasyTask.MaxDiff(new[] { 0, 1, 2, 3, 4, 5, 6 }));
+                    Assert.AreEqual(11, MaxDiffEasyTask.MaxDiff(new[] { -0, 1, 2, -3, 4, 5, -6 }));
+                    Assert.AreEqual(16, MaxDiffEasyTask.MaxDiff(new[] { 0, 1, 2, 3, 4, 5, 16 }));
+                    Assert.AreEqual(0, MaxDiffEasyTask.MaxDiff(new[] { 16 }));
+                    Assert.AreEqual(0, MaxDiffEasyTask.MaxDiff(new int[] { }));
+                }
+
+                [Test]
                 public void SumOfTriangularNumbersTest()
                 {
                     Assert.AreEqual(56, SumOfTriangularNumbersTask.SumTriangularNumbers(6));
