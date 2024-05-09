@@ -16,6 +16,14 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void SumOfTheFirstNthTermOfSeriesTest()
+                {
+                    Assert.AreEqual("0.00", SumOfTheFirstNthTermOfSeriesTask.SeriesSum(0));
+                    Assert.AreEqual("1.77", SumOfTheFirstNthTermOfSeriesTask.SeriesSum(9));
+
+                }
+
+                [Test]
                 public void MaxDiffEasyTest()
                 {
                     Assert.AreEqual(6, MaxDiffEasyTask.MaxDiff(new[] { 0, 1, 2, 3, 4, 5, 6 }));
