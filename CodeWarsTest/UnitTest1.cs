@@ -16,6 +16,15 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void MinimizeSumOfArrayTest()
+                {
+                    Assert.AreEqual(342, MinimizeSumOfArrayTask.MinSum(new int[] { 12, 6, 10, 26, 3, 24 }));
+                    Assert.AreEqual(74, MinimizeSumOfArrayTask.MinSum(new int[] { 9, 2, 8, 7, 5, 4, 0, 6 }));
+
+                }
+
+
+                [Test]
                 public void SumOfTheFirstNthTermOfSeriesTest()
                 {
                     Assert.AreEqual("0.00", SumOfTheFirstNthTermOfSeriesTask.SeriesSum(0));
