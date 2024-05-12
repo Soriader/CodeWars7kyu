@@ -16,6 +16,14 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void SortTheGiftCodeTest()
+                {
+                    Assert.AreEqual("abcdef", SortTheGiftCodeTask.SortGiftCode("abcdef"));
+                    Assert.AreEqual("kpqsuvy", SortTheGiftCodeTask.SortGiftCode("pqksuvy"));
+                    Assert.AreEqual("abcdefghijklmnopqrstuvwxyz", SortTheGiftCodeTask.SortGiftCode("zyxwvutsrqponmlkjihgfedcba"));
+                }
+
+                [Test]
                 public void AlphabetSymmetryTest()
                 {
                     Assert.That(AlphabetSymmetryTask.Solve(new List<string> { "abode", "ABc", "xyzD" }), Is.EqualTo(new List<int> { 4, 3, 1 }));
