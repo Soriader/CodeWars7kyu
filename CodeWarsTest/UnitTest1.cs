@@ -16,6 +16,13 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void FindTheMiddleElementTest()
+                {
+                    Assert.AreEqual(0, FindTheMiddleElementTask.Gimme(new double[] { 2, 3, 1 }));
+                    Assert.AreEqual(1, FindTheMiddleElementTask.Gimme(new double[] { 5, 10, 14 }));
+                }
+
+                [Test]
                 public void SortTheGiftCodeTest()
                 {
                     Assert.AreEqual("abcdef", SortTheGiftCodeTask.SortGiftCode("abcdef"));
