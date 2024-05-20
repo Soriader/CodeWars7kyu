@@ -16,6 +16,17 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void SumOfCubesTest()
+                {
+                    Assert.AreEqual(1, SumOfCubesTask.SumCubes(1));
+                    Assert.AreEqual(9, SumOfCubesTask.SumCubes(2));
+                    Assert.AreEqual(36, SumOfCubesTask.SumCubes(3));
+                    Assert.AreEqual(100, SumOfCubesTask.SumCubes(4));
+                    Assert.AreEqual(3025, SumOfCubesTask.SumCubes(10));
+                    Assert.AreEqual(58155876, SumOfCubesTask.SumCubes(123));
+                }
+
+                [Test]
                 public void FindTheMiddleElementTest()
                 {
                     Assert.AreEqual(0, FindTheMiddleElementTask.Gimme(new double[] { 2, 3, 1 }));
