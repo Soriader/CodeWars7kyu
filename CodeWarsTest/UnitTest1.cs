@@ -15,6 +15,11 @@ namespace CodeWarsTest
         {
 			public class Tests
             {
+                [Test]
+                public void FunctionalAdditionTest()
+                {
+                    Assert.AreEqual(4, FunctionalAdditionTask.Add(1)(3));
+                }
 
                 [Test]
                 public void DigitsExplosionTest()
