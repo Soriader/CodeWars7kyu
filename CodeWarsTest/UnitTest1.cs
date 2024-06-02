@@ -17,6 +17,13 @@ namespace CodeWarsTest
             {
 
                 [Test]
+                public void DigitsExplosionTest()
+                {
+                    Assert.AreEqual("333122", DigitsExplosionTask.Explode("312"));
+                    Assert.AreEqual("12222666666999999999", DigitsExplosionTask.Explode("102269"));
+                }
+
+                [Test]
                 public void IncrementerTest()
                 {
                     Assert.AreEqual(new int[] { 2, 4, 6 }, IncrementerTask.Incrementer(new int[] { 1, 2, 3 }));
