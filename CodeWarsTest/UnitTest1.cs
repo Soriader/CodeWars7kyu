@@ -17,6 +17,16 @@ namespace CodeWarsTest
             {
 
                 [Test]
+                public void CurryingFunctionsMultiplyAllElementsInAnArrayTest()
+                {
+                    Assert.AreEqual(new int[] { 1, 2, 3 }, CurryingFunctionsMultiplyAllElementsInAnArrayTask.MultiplyAll(new int[] { 1, 2, 3 })(1));
+                    Assert.AreEqual(new int[] { 2, 4, 6 }, CurryingFunctionsMultiplyAllElementsInAnArrayTask.MultiplyAll(new int[] { 1, 2, 3 })(2));
+                    Assert.AreEqual(new int[] { 0, 0, 0 }, CurryingFunctionsMultiplyAllElementsInAnArrayTask.MultiplyAll(new int[] { 1, 2, 3 })(0));
+                    Assert.AreEqual(new int[] { }, CurryingFunctionsMultiplyAllElementsInAnArrayTask.MultiplyAll(new int[] { })(10));
+
+                }
+
+                [Test]
                 public void FoldingYourWayToTheMoonTest()
                 {
                     Assert.AreEqual(42, FoldingYourWayToTheMoonTask.FoldTo(384000000));
