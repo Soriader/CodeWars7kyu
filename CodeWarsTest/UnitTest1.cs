@@ -15,6 +15,14 @@ namespace CodeWarsTest
         {
 			public class Tests
             {
+
+                [Test]
+                public void FoldingYourWayToTheMoonTest()
+                {
+                    Assert.AreEqual(42, FoldingYourWayToTheMoonTask.FoldTo(384000000));
+                }
+
+
                 [Test]
                 public void FunctionalAdditionTest()
                 {
