@@ -15,6 +15,15 @@ namespace CodeWarsTest
         {
 			public class Tests
             {
+
+                [Test]
+                public static void GoingToTheCinemaTest()
+                {
+                    Assert.AreEqual(43, GoingToTheCinemaTask.Movie(500, 15, 0.9));
+                    Assert.AreEqual(24, GoingToTheCinemaTask.Movie(100, 10, 0.95));
+
+                }
+
                 [Test]
                 public void DisariumNumberTest()
                 {
