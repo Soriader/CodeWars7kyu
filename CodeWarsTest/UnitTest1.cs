@@ -16,6 +16,12 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void ReturnTheFirstMMultiplesOfNTest()
+                {
+                    Assert.AreEqual(new double[] { 5, 10, 15 }, ReturnTheFirstMMultiplesOfNTask.Multiples(3, 5));
+                }
+
+                [Test]
                 public void ToLeetSpeakTest()
                 {
                     Assert.AreEqual("1337", ToLeetSpeakTask.ToLeetSpeak("LEET"));
