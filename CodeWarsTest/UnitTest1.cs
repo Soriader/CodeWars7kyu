@@ -16,6 +16,14 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void AlternateCaseTest()
+                {
+                    Assert.AreEqual("ABC", AlternateCaseTask.AlternateCase("abc"));
+                    Assert.AreEqual("abc", AlternateCaseTask.AlternateCase("ABC"));
+                    Assert.AreEqual("hELLO wORLD", AlternateCaseTask.AlternateCase("Hello World"));
+                }
+
+                [Test]
                 public void ARuleOfDivisibilityBySevenTest()
                 {
                     Assert.AreEqual(new long[] { 10, 2 }, ARuleOfDivisibilityBySevenTask.Seven(1021));
