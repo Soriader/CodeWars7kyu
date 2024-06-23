@@ -16,6 +16,12 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void PaddedNumbersTest()
+                {
+                    Assert.AreEqual("Value is 00005", PaddedNumbersTask.Solution(5));
+                }
+
+                [Test]
                 public void UniqueStringCharactersTest()
                 {
                     Assert.That(UniqueStringCharactersTask.Solve("xyab", "xzca"), Is.EqualTo("ybzc"));
