@@ -16,6 +16,12 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void FindCountofMostFrequentItemInAnArrayTest()
+                {
+                    Assert.AreEqual(5, FindCountofMostFrequentItemInAnArrayTask.MostFrequentItemCount(new int[] { 3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3 }));
+                }
+
+                [Test]
                 public void PaddedNumbersTest()
                 {
                     Assert.AreEqual("Value is 00005", PaddedNumbersTask.Solution(5));
