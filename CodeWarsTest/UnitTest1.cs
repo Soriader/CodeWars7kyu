@@ -16,6 +16,15 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void UniqueStringCharactersTest()
+                {
+                    Assert.That(UniqueStringCharactersTask.Solve("xyab", "xzca"), Is.EqualTo("ybzc"));
+                    Assert.That(UniqueStringCharactersTask.Solve("xyabb", "xzca"), Is.EqualTo("ybbzc"));
+                    Assert.That(UniqueStringCharactersTask.Solve("abcd", "xyz"), Is.EqualTo("abcdxyz"));
+                    Assert.That(UniqueStringCharactersTask.Solve("xxx", "xzca"), Is.EqualTo("zca"));
+                }
+
+                [Test]
                 public void NumberOfOccurrencesTest()
                 {
                     Assert.AreEqual(2, NumberOfOccurrencesTask.NumberOfOccurrences(4, new int[] { 4, 0, 4 }));
