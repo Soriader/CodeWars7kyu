@@ -16,6 +16,14 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void CompareStringsBySumOfCharsTest()
+                {
+                    Assert.AreEqual(true, CompareStringsBySumOfCharsTask.Compare("AD", "BC"));
+                    Assert.AreEqual(false, CompareStringsBySumOfCharsTask.Compare("AD", "DD"));
+
+                }
+
+                [Test]
                 public void CharCodeCalculationTest()
                 {
                     Assert.AreEqual(0, CharCodeCalculationTask.Calc(""));
