@@ -16,6 +16,14 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void ExampleTests()
+                {
+                    Assert.AreEqual("Escaped!", CatAndMouseTask.CatMouse("C....m"));
+                    Assert.AreEqual("Caught!", CatAndMouseTask.CatMouse("C..m"));
+                    Assert.AreEqual("Escaped!", CatAndMouseTask.CatMouse("C.....m"));
+                }
+
+                [Test]
                 public void CompareStringsBySumOfCharsTest()
                 {
                     Assert.AreEqual(true, CompareStringsBySumOfCharsTask.Compare("AD", "BC"));
