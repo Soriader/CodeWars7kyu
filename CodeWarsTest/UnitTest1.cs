@@ -16,6 +16,15 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void SevenAteNineTest()
+                {
+                    Assert.AreEqual("77", SevenAteNineTask.SevenAteNine("797"));
+                    Assert.AreEqual("7777", SevenAteNineTask.SevenAteNine("7979797"));
+                    Assert.AreEqual("16556178612178977", SevenAteNineTask.SevenAteNine("165561786121789797"));
+
+                }
+
+                [Test]
                 public void ExampleTests()
                 {
                     Assert.AreEqual("Escaped!", CatAndMouseTask.CatMouse("C....m"));
