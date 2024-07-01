@@ -16,6 +16,16 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void BinaryOrHexTest()
+                {
+                    Assert.AreEqual("10", BinaryOrHexTask.EvensAndOdds(2));
+                    Assert.AreEqual("d", BinaryOrHexTask.EvensAndOdds(13));
+                    Assert.AreEqual("2f", BinaryOrHexTask.EvensAndOdds(47));
+                    Assert.AreEqual("0", BinaryOrHexTask.EvensAndOdds(0));
+                    Assert.AreEqual("11001000000000", BinaryOrHexTask.EvensAndOdds(12800));
+                }
+
+                [Test]
                 public void FireonTheBoatTest()
                 {
                     Assert.AreEqual("Boat Rudder Mast Boat Hull Water ~~ Boat Deck Hull ~~ Propeller Deck ~~ Deck Boat Mast", FireonTheBoatTask.FireFight("Boat Rudder Mast Boat Hull Water Fire Boat Deck Hull Fire Propeller Deck Fire Deck Boat Mast"));
