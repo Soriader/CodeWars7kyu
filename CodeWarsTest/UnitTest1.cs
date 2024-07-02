@@ -16,6 +16,12 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void SortArraysTest()
+                {
+                    Assert.AreEqual("one,three,two", string.Join(",", SortArraysTask.SortMe(new[] { "one", "two", "three" })));
+                }
+
+                [Test]
                 public void BinaryOrHexTest()
                 {
                     Assert.AreEqual("10", BinaryOrHexTask.EvensAndOdds(2));
