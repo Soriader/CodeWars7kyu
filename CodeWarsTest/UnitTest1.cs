@@ -15,6 +15,17 @@ namespace CodeWarsTest
         {
 			public class Tests
             {
+
+                [Test]
+                public void InspiringStringsTest()
+                {
+                    Assert.AreEqual("fgh", InspiringStringsTask.LongestWord("a b c d e fgh"));
+                    Assert.AreEqual("three", InspiringStringsTask.LongestWord("one two three"));
+                    Assert.AreEqual("grey", InspiringStringsTask.LongestWord("red blue grey"));
+                }
+
+
+
                 [Test]
                 public void ByThreeOrNotTest()
                 {
