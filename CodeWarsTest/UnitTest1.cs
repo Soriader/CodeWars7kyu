@@ -16,6 +16,17 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void StrongNumberTest()
+                {
+                    Assert.AreEqual("STRONG!!!!", StrongNumberTask.StrongNumber(1));
+                    Assert.AreEqual("STRONG!!!!", StrongNumberTask.StrongNumber(2));
+                    Assert.AreEqual("STRONG!!!!", StrongNumberTask.StrongNumber(145));
+                    Assert.AreEqual("Not Strong !!", StrongNumberTask.StrongNumber(7));
+                    Assert.AreEqual("Not Strong !!", StrongNumberTask.StrongNumber(93));
+                    Assert.AreEqual("Not Strong !!", StrongNumberTask.StrongNumber(185));
+                }
+
+                [Test]
                 public void StantonMeasureTest()
                 {
                     Assert.AreEqual(3, StantonMeasureTask.StantonMeasure(new int[] { 1, 4, 3, 2, 1, 2, 3, 2 }));
