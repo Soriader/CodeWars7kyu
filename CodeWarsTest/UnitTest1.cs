@@ -16,6 +16,15 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void BandNameGeneratorTest()
+                {
+                    Assert.AreEqual("The Knife", BandNameGeneratorTask.BandNameGenerator("knife"));
+                    Assert.AreEqual("Tartart", BandNameGeneratorTask.BandNameGenerator("tart"));
+                    Assert.AreEqual("Sandlesandles", BandNameGeneratorTask.BandNameGenerator("sandles"));
+                    Assert.AreEqual("The Bed", BandNameGeneratorTask.BandNameGenerator("bed"));
+                }
+
+                [Test]
                 public void CountAllTheSheepOnFarmTest()
                 {
                     CountAllTheSheepOnFarmTask kata = new CountAllTheSheepOnFarmTask();
