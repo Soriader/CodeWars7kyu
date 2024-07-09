@@ -16,6 +16,12 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void DiscoverTheOriginalPriceTest()
+                {
+                    Assert.AreEqual(100.00M, DiscoverTheOriginalPriceTask.DiscoverOriginalPrice(75M, 25M));
+                }
+
+                [Test]
                 public void ReverseTheBitsTest()
                 {
                     Assert.AreEqual(267, ReverseTheBitsTask.ReverseBits(417));
