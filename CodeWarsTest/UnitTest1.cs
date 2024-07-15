@@ -16,6 +16,12 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public static void ReturnStringOfFirstCharactersTest()
+                {
+                    Assert.AreEqual("cia", ReturnStringOfFirstCharactersTask.MakeString("coding is awesome"));
+                }
+
+                [Test]
                 public void EvensTimesLastTest()
                 {
                     Assert.AreEqual(30, EvensTimesLastTask.EvenTimesLast(new int[] { 2, 3, 4, 5 }));
