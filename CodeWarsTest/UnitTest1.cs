@@ -16,6 +16,15 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void InitializeMyNameTest()
+                {
+                    Assert.AreEqual("Jack Ryan", InitializeMyNameTask.InitializeNames("Jack Ryan"));
+                    Assert.AreEqual("Lois M. Lane", InitializeMyNameTask.InitializeNames("Lois Mary Lane"));
+                    Assert.AreEqual("Dimitri", InitializeMyNameTask.InitializeNames("Dimitri"));
+                    Assert.AreEqual("Alice B. C. Davis", InitializeMyNameTask.InitializeNames("Alice Betty Catherine Davis"));
+                }
+
+                [Test]
                 public void HowManyArgumentsTest()
                 {
                     Assert.AreEqual(3, HowManyArgumentsTask.CountArgs(1, 2, 3));
