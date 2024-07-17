@@ -16,6 +16,15 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void HowManyConsecutiveTest()
+                {
+                    Assert.AreEqual(2, HowManyConsecutiveTask.Consecutive(new int[] { 4, 8, 6 }));
+                    Assert.AreEqual(0, HowManyConsecutiveTask.Consecutive(new int[] { 1, 2, 3, 4 }));
+                    Assert.AreEqual(0, HowManyConsecutiveTask.Consecutive(new int[] { }));
+                    Assert.AreEqual(0, HowManyConsecutiveTask.Consecutive(new int[] { 1 }));
+                }
+
+                [Test]
                 public void SimpleRemoveDuplicatesTest()
                 {
                     Assert.AreEqual(new int[] { 4, 6, 3 }, SimpleRemoveDuplicatesTask.solve(new int[] { 3, 4, 4, 3, 6, 3 }));
