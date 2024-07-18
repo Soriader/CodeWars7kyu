@@ -16,6 +16,21 @@ namespace CodeWarsTest
 			public class Tests
             {
                 [Test]
+                public void SampleTests()
+                {
+                    TestToValidSpacingTask(true, "Hello world");
+                    TestToValidSpacingTask(false, " Hello world");
+                    TestToValidSpacingTask(false, "Hello world ");
+                    TestToValidSpacingTask(true, "Hello");
+                    TestToValidSpacingTask(true, "Helloworld");
+
+                    void TestToValidSpacingTask(bool solution, string input)
+                    {
+                        Assert.AreEqual(solution, ValidSpacingTask.ValidSpacing(input), $"Incorrect answer for input \"{input}\"");
+                    }
+                }
+
+                [Test]
                 public void ToTimeTest()
                 {
                     Act(3600, "1 hour(s) and 0 minute(s)");
