@@ -16,6 +16,16 @@ namespace CodeWarsTest
 			public class Tests
             {
 				[Test]
+				public void BasicTests()
+				{
+					var scores = new int[] { 49, 3, 5, 300, 7 };
+					Assert.AreEqual(73, AverageScoresTask.Average(scores));
+
+					scores = new int[] { 90, 98, 89, 100, 100, 86, 94 };
+					Assert.AreEqual(94, AverageScoresTask.Average(scores));
+				}
+
+				[Test]
 				public void CleanUpTest()
 				{
 					Assert.AreEqual("Clean", CleanUpTask.Crap(new char[,] { { '_', '_', '_', '_' }, { '_', '_', '_', '@' }, { '_', '_', '@', '_' } }, 2, 2));
