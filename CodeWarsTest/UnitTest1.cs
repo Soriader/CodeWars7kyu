@@ -16,6 +16,14 @@ namespace CodeWarsTest
 			public class Tests
             {
 				[Test]
+				public void SayHelloTest()
+				{
+					Assert.AreEqual(SayHelloTask.Greet("Niks"), "hello Niks!");
+					Assert.AreEqual(SayHelloTask.Greet(""), null);
+					Assert.AreEqual(SayHelloTask.Greet(null), null);
+				}
+
+				[Test]
 				public void LengthAndTwoTest()
 				{
 					Assertion(new object[] { true, false, true, false, true }, (5, true, false));
