@@ -16,6 +16,24 @@ namespace CodeWarsTest
 			public class Tests
             {
 				[Test]
+				public void BasicSequencePracticeTest()
+				{
+					int input = 3;
+					int[] expected = new int[] { 0, 1, 3, 6 };
+
+					int[] actual = BasicSequencePracticeTask.SumOfN(input);
+
+					Assert.AreEqual(expected, actual);
+
+					int input2 = -4;
+					int[] expected2 = new int[] { 0, -1, -3, -6, -10 };
+
+					int[] actual2 = BasicSequencePracticeTask.SumOfN(input);
+
+					Assert.AreEqual(expected2, actual2);
+				}
+
+				[Test]
 				public void BasicCalculatorTest()
 				{
 					Assert.AreEqual(-4.8, BasicCalculatorTask.Execute(3.2, '-', 8));
