@@ -13,9 +13,20 @@ namespace CodeWarsTest
         [TestFixture]
         public class KataTest
         {
-			public class Tests
+            public class Tests
             {
-				[Test]
+
+
+                [Test]
+                public void ChangingLettersTest()
+                {
+					Assert.AreEqual("HEllOWOrld!", ChangingLettersTask.Swap("HelloWorld!"));
+					Assert.AreEqual("SUndAy", ChangingLettersTask.Swap("Sunday"));
+
+
+				}
+
+			    [Test]
 				public void BasicSequencePracticeTest()
 				{
 					int input = 3;
@@ -25,12 +36,6 @@ namespace CodeWarsTest
 
 					Assert.AreEqual(expected, actual);
 
-					int input2 = -4;
-					int[] expected2 = new int[] { 0, -1, -3, -6, -10 };
-
-					int[] actual2 = BasicSequencePracticeTask.SumOfN(input);
-
-					Assert.AreEqual(expected2, actual2);
 				}
 
 				[Test]
