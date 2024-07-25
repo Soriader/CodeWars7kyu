@@ -14,7 +14,15 @@ namespace CodeWarsTest
         public class KataTest
         {
             public class Tests
-            {
+			{
+				[Test]
+                public void DryingPotatoesTest()
+                {
+					Assert.AreEqual(114, DryingPotatoesTask.Potatoes(82, 127, 80));
+					Assert.AreEqual(100, DryingPotatoesTask.Potatoes(93, 129, 91));
+
+				}
+
 				[Test]
 				public void HelpBobCountTest()
 				{
