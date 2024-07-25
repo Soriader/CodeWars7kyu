@@ -16,6 +16,12 @@ namespace CodeWarsTest
             public class Tests
             {
 				[Test]
+				public void HelpBobCountTest()
+				{
+					Assert.AreEqual(7, HelpBobCountTask.CountLettersAndDigits("n!!ice!!123"));
+				}
+
+				[Test]
 				public void PlusMinusCountTest()
 				{
 					Assert.AreEqual(1, PlusMinusCountTask.CatchSignChange(new int[] { 2, 6, 3, 0, 5, -3 }));
