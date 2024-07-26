@@ -16,6 +16,16 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void CountConsonantsTest()
+				{
+					Assert.AreEqual(0, CountConsonantsTask.ConsonantCount(""));
+					Assert.AreEqual(0, CountConsonantsTask.ConsonantCount("aaaaa"));
+					Assert.AreEqual(7, CountConsonantsTask.ConsonantCount("helLo world"));
+					Assert.AreEqual(0, CountConsonantsTask.ConsonantCount("012456789"));
+					Assert.AreEqual(2, CountConsonantsTask.ConsonantCount("012345_Cb"));
+				}
+
+				[Test]
 				public void EnumerableMagicFiveTest()
 				{
 					Assert.AreEqual(true, EnumerableMagicFiveTask.One(new int[] { 1, 2, 3, 4, 5 }, v => v < 2));
