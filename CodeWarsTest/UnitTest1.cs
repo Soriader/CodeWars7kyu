@@ -15,6 +15,16 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+                [Test]
+                public void ReturnSubstringTest() 
+                {
+					Assert.AreEqual(2, ReturnSubstringTask.SubstringCount("abcdeb", "b"));
+					Assert.AreEqual(1, ReturnSubstringTask.SubstringCount("abcdeb", "a"));
+					Assert.AreEqual(3, ReturnSubstringTask.SubstringCount("ccddeeccddeecc", "cc"));
+
+				}
+
+
 				[Test]
 				public void CountConsonantsTest()
 				{
