@@ -16,6 +16,15 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void HeronFormulaTest()
+				{
+
+					Assert.AreEqual(6.0, HeronFormulaTask.Heron(3, 4, 5));
+					Assert.AreEqual(24.0, HeronFormulaTask.Heron(6, 8, 10));
+
+				}
+
+				[Test]
 				public void IsNDivisibleTest()
 				{
 					Assert.AreEqual(false, IsNDivisibleTask.IsDivisible(3, 3, 4));
