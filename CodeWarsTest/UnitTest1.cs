@@ -15,7 +15,15 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
-                [Test]
+				[Test]
+				public void IsNDivisibleTest()
+				{
+					Assert.AreEqual(false, IsNDivisibleTask.IsDivisible(3, 3, 4));
+					Assert.AreEqual(true, IsNDivisibleTask.IsDivisible(12, 3, 4));
+
+				}
+
+				[Test]
                 public void ReturnSubstringTest() 
                 {
 					Assert.AreEqual(2, ReturnSubstringTask.SubstringCount("abcdeb", "b"));
