@@ -4,6 +4,8 @@ using System;
 using System.Reflection;
 using System.Text;
 using static CodeWars7kyu.DisemvowelTrollsTask;
+using static CodeWars7kyu.WhoIsOnlineTask.User;
+using static CodeWars7kyu.WhoIsOnlineTask;
 
 namespace CodeWarsTest
 {
@@ -15,6 +17,24 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				[Test]
+				public void WhoIsOnlineTest()
+				{
+					User[] friends = new User[]
+					{
+		new User("David", UserStatus.Online, 10),
+		new User("Lucy", UserStatus.Offline, 22),
+		new User("Bob", UserStatus.Online, 104)
+					};
+					var expected = new Dictionary<UserStatus, IEnumerable<string>>
+	  {
+		{UserStatus.Online, new[] {"David"}},
+		{UserStatus.Offline, new[] {"Lucy"}},
+		{UserStatus.Away, new[] {"Bob"}}
+	  };
+					Assert.That(User.WhosOnline(friends), Is.EqualTo(expected));
+				}
+
 				[Test]
 				public void HeronFormulaTest()
 				{
