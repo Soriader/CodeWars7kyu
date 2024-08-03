@@ -18,6 +18,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void EvenOrOddWhichIsGreaterTest()
+				{
+					Assert.AreEqual("Odd is greater than Even", EvenOrOddWhichIsGreaterTask.EvenOrOdd("123"));
+					Assert.AreEqual("Even is greater than Odd", EvenOrOddWhichIsGreaterTask.EvenOrOdd("12"));
+					Assert.AreEqual("Even and Odd are the same", EvenOrOddWhichIsGreaterTask.EvenOrOdd("112"));
+				}
+
+				[Test]
 				public void CalculateMeanAndConcatenateStringTest()
 				{
 					var lst1 = new[] { 'u', '6', 'd', '1', 'i', 'w', '6', 's', 't', '4', 'a', '6', 'g', '1', '2', 'w', '8', 'o', '2', '0' };
