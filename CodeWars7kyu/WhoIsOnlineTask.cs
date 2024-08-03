@@ -66,7 +66,6 @@ namespace CodeWars7kyu
 
 				return result;
 
-
 			}
 		}
 	}
