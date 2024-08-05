@@ -18,6 +18,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void SumAListButIgnoreAnyDuplicatesTest()
+				{
+					Assert.AreEqual(5, SumAListButIgnoreAnyDuplicatesTask.SumNoDuplicates(new int[] { 1, 1, 2, 3 }));
+					Assert.AreEqual(3, SumAListButIgnoreAnyDuplicatesTask.SumNoDuplicates(new int[] { 1, 1, 2, 2, 3 }));
+				}
+
+				[Test]
 				public void HellsKitchenTest()
 				{
 					Assert.AreEqual("WH@T!!!! F*CK!!!! D@MN!!!! C@K*!!!!", HellsKitchenTask.Gordon("What feck damn cake"));
