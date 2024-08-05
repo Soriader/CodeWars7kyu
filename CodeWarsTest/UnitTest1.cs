@@ -6,6 +6,7 @@ using System.Text;
 using static CodeWars7kyu.DisemvowelTrollsTask;
 using static CodeWars7kyu.WhoIsOnlineTask.User;
 using static CodeWars7kyu.WhoIsOnlineTask;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CodeWarsTest
 {
@@ -17,6 +18,13 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				[Test]
+				public void JumpingNumberTest()
+				{
+					Assert.That(JumpingNumberTask.JumpingNumber(00000079), Is.EqualTo("Not!!"));
+					Assert.That(JumpingNumberTask.JumpingNumber(98789876), Is.EqualTo("Jumping!!"));
+				}
+
 				[Test]
 				public void SumAListButIgnoreAnyDuplicatesTest()
 				{
@@ -1389,7 +1397,7 @@ namespace CodeWarsTest
                 [Test]
                 public static void PartsOfAListTest()
                 {
-                    String[] s1 = new String[] { "cdIw", "tzIy", "xDu", "rThG" };
+					string[] s1 = new string[] { "cdIw", "tzIy", "xDu", "rThG" };
                     string[][] expected = new string[][] 
                     {
     
@@ -1530,8 +1538,8 @@ namespace CodeWarsTest
                 [Test]
                 public void PartridgeWatchTest()
                 {
-                    Assert.AreEqual("Mine's a Pint!", PartridgeWatchTask.Part(new String[] { "Grouse", "Partridge", "Pheasant" }));
-                    Assert.AreEqual("Mine's a Pint!!!!!!!!", PartridgeWatchTask.Part(new String[] { "Grouse", "Partridge", "Pheasant", "Goose", "Starling", "Robin", "Thrush", "Emu", "PearTree", "Chat", "Dan", "Square", "Toblerone", "Lynn", "AlphaPapa", "BMW", "Graham", "Tool", "Nomad", "Finger", "Hamster" }));
+                    Assert.AreEqual("Mine's a Pint!", PartridgeWatchTask.Part(new string[] { "Grouse", "Partridge", "Pheasant" }));
+                    Assert.AreEqual("Mine's a Pint!!!!!!!!", PartridgeWatchTask.Part(new string[] { "Grouse", "Partridge", "Pheasant", "Goose", "Starling", "Robin", "Thrush", "Emu", "PearTree", "Chat", "Dan", "Square", "Toblerone", "Lynn", "AlphaPapa", "BMW", "Graham", "Tool", "Nomad", "Finger", "Hamster" }));
                     Assert.AreEqual("Lynn, I've pierced my foot on a spike!!", PartridgeWatchTask.Part(new string[] { "Pheasant", "Goose", "Starling", "Robin" }));
                 }
 
