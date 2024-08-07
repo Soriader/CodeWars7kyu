@@ -19,6 +19,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+                public static void ProductArrayTest() 
+                {
+					Assert.AreEqual(new int[] { 20, 12 }, ProductArrayTask.ProductArray(new int[] { 12, 20}));
+					Assert.AreEqual(new int[] { 216, 24, 162, 324 }, ProductArrayTask.ProductArray(new int[] { 13, 10, 5, 2, 9 }));
+					Assert.AreEqual(new int[] { 900, 1170, 2340, 5850, 1300 }, ProductArrayTask.ProductArray(new int[] { 13, 10, 5, 2, 9 }));
+				}
+
+				[Test]
 				public static void AllInclusiveTest()
 				{
 					List<string> a = new List<string>() { "bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs" };
