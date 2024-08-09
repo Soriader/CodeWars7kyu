@@ -19,6 +19,20 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void DotCalculatorTest()
+				{
+					Assert.AreEqual("....................", DotCalculatorTask.Calculator("..... + ..............."));
+					Assert.AreEqual("..", DotCalculatorTask.Calculator("..... - ..."));
+					Assert.AreEqual("....", DotCalculatorTask.Calculator("..... - ."));
+					Assert.AreEqual("...............", DotCalculatorTask.Calculator("..... * ..."));
+					Assert.AreEqual("..........", DotCalculatorTask.Calculator("..... * .."));
+					Assert.AreEqual("..", DotCalculatorTask.Calculator("..... // .."));
+					Assert.AreEqual(".....", DotCalculatorTask.Calculator("..... // ."));
+					Assert.AreEqual("", DotCalculatorTask.Calculator(". // .."));
+					Assert.AreEqual("", DotCalculatorTask.Calculator(". - ."));
+				}
+
+				[Test]
 				public void SampleTest()
 				{
 					Assert.AreEqual(true, NiceArrayTask.IsNice(new int[] { 2, 10, 9, 3 }));
