@@ -19,6 +19,12 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void LetterboxPaintSquadTest()
+				{
+					Assert.AreEqual(new int[] { 1, 9, 6, 3, 0, 1, 1, 1, 1, 1 }, LetterboxPaintSquadTask.PaintLetterBoxes(125, 132).ToArray());
+				}
+
+				[Test]
 				public void DotCalculatorTest()
 				{
 					Assert.AreEqual("....................", DotCalculatorTask.Calculator("..... + ..............."));

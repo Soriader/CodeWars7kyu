@@ -8,6 +8,7 @@ namespace CodeWars7kyu
 {
 	public class DotCalculatorTask
 	{
+
 		public static string Calculator(string txt)
 		{
 			string[] parts = txt.Split(' ');
