@@ -19,6 +19,21 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void UnscrambledEggsTest()
+				{
+					Assert.AreEqual("code here", UnscrambledEggsTask.UnscrambleEggs("ceggodegge heggeregge"));
+					Assert.AreEqual("FUN KATA", UnscrambledEggsTask.UnscrambleEggs("FeggUNegg KeggATeggA"));
+				}
+
+				[Test]
+				public void GenericTests()
+				{
+					Assert.AreEqual("c:**,h:*,i:*,a:*,g:*,o:*", InterviewQuestionTask.GetStrings("Chicago"));
+					Assert.AreEqual("b:*,a:*,n:*,g:*,k:**,o:*", InterviewQuestionTask.GetStrings("Bangkok"));
+					Assert.AreEqual("l:*,a:**,s:**,v:*,e:*,g:*", InterviewQuestionTask.GetStrings("Las Vegas"));
+				}
+
+				[Test]
 				public void LetterboxPaintSquadTest()
 				{
 					Assert.AreEqual(new int[] { 1, 9, 6, 3, 0, 1, 1, 1, 1, 1 }, LetterboxPaintSquadTask.PaintLetterBoxes(125, 132).ToArray());
