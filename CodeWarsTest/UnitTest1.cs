@@ -19,6 +19,18 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void RegexpBasicsIsItAVowelTest()
+				{
+					Assert.AreEqual(false, RegexpBasicsIsItAVowelTask.Vowel(""));
+					Assert.AreEqual(true, RegexpBasicsIsItAVowelTask.Vowel("a"));
+					Assert.AreEqual(true, RegexpBasicsIsItAVowelTask.Vowel("E"));
+					Assert.AreEqual(false, RegexpBasicsIsItAVowelTask.Vowel("ou"));
+					Assert.AreEqual(false, RegexpBasicsIsItAVowelTask.Vowel("z"));
+					Assert.AreEqual(false, RegexpBasicsIsItAVowelTask.Vowel("lol"));
+
+				}
+
+				[Test]
 				public void lastDigitsOfANumberTest()
 				{
 					Assert.AreEqual(new[] { 1 }, lastDigitsOfANumberTask.LastDigit(1, 1));
