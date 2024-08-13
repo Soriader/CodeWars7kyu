@@ -23,6 +23,12 @@ namespace CodeWars7kyu
 
 			return result.ToArray();
 		}
+
+
+
+		//Another good solution
+			  //public static int[] FilterLucky(int[] x) => Array.FindAll(x, m => $"{m}".Contains('7'));
+
 	}
 }
 //https://www.codewars.com/kata/580435ab150cca22650001fb/train/csharp
