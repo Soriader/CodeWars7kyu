@@ -19,6 +19,18 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void AreaOfACircleTest()
+				{
+					Assert.AreEqual(3.141, AreaOfACircleTask.CalculateAreaOfCircle(1), 0.01);
+					Assert.AreEqual(5881.248, AreaOfACircleTask.CalculateAreaOfCircle(43.2673), 0.01);
+					Assert.AreEqual(14526.724, AreaOfACircleTask.CalculateAreaOfCircle(68), 0.01);
+					Assert.Throws<ArgumentException>(() => AreaOfACircleTask.CalculateAreaOfCircle(0));
+					Assert.Throws<ArgumentException>(() => AreaOfACircleTask.CalculateAreaOfCircle(-1));
+
+
+				}
+
+				[Test]
 				public void CalculateTwoPeopleIndividualAgesTest()
 				{
 					Assert.AreEqual(new double[] { 14, 10 }, CalculateTwoPeopleIndividualAgesTask.GetAges(24, 4), "it returns {14, 10} when passed 24, 4");
