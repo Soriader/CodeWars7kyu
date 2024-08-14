@@ -19,6 +19,25 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void CorrectTheTimeStringTest()
+				{
+					Assert.AreEqual("09:10:01", CorrectTheTimeStringTask.Correct("09:10:01"));
+					Assert.AreEqual("12:10:10", CorrectTheTimeStringTask.Correct("11:70:10"));
+					Assert.AreEqual("20:40:39", CorrectTheTimeStringTask.Correct("19:99:99"));
+					Assert.AreEqual("00:01:01", CorrectTheTimeStringTask.Correct("24:01:01"));
+					Assert.AreEqual("04:01:01", CorrectTheTimeStringTask.Correct("52:01:01"));
+
+					Assert.AreEqual(null, CorrectTheTimeStringTask.Correct("001122"));
+					Assert.AreEqual(null, CorrectTheTimeStringTask.Correct("00;11;22"));
+					Assert.AreEqual(null, CorrectTheTimeStringTask.Correct("0a:1c:22"));
+
+					Assert.AreEqual("", CorrectTheTimeStringTask.Correct(""));
+
+					Assert.AreEqual(null, CorrectTheTimeStringTask.Correct(null));
+
+				}
+
+				[Test]
 				public void RegexpBasicsIsItAVowelTest()
 				{
 					Assert.AreEqual(false, RegexpBasicsIsItAVowelTask.Vowel(""));
@@ -99,14 +118,6 @@ namespace CodeWarsTest
 					Assert.AreEqual(36, PreviousMultipleOfThreeTask.PreviousMultipleOfThree(36));
 					Assert.AreEqual(12, PreviousMultipleOfThreeTask.PreviousMultipleOfThree(1244));
 					Assert.AreEqual(9, PreviousMultipleOfThreeTask.PreviousMultipleOfThree(952406));
-				}
-
-				[Test]
-                public static void ProductArrayTest() 
-                {
-					Assert.AreEqual(new int[] { 20, 12 }, ProductArrayTask.ProductArray(new int[] { 12, 20}));
-					Assert.AreEqual(new int[] { 216, 24, 162, 324 }, ProductArrayTask.ProductArray(new int[] { 13, 10, 5, 2, 9 }));
-					Assert.AreEqual(new int[] { 900, 1170, 2340, 5850, 1300 }, ProductArrayTask.ProductArray(new int[] { 13, 10, 5, 2, 9 }));
 				}
 
 				[Test]
@@ -2139,4 +2150,39 @@ namespace CodeWarsTest
             }
         }
     }
+
+	[TestFixture]
+	class TestsForProductArrayTask
+	{
+		[TestCase("12 20", "20 12")]
+		[TestCase("3 27 4 2", "216 24 162 324")]
+		[TestCase("13 10 5 2 9", "900 1170 2340 5850 1300")]
+		[TestCase("16 17 4 3 5 2", "2040 1920 8160 10880 6528 16320")]
+		public void BasicTest(string s, string str)
+		{
+			Assert.That(ProductArrayTask.ProductArray(Foo(s)), Is.EqualTo(Foo(str)));
+		}
+		int[] Foo(string s) => s.Split().Select(int.Parse).ToArray();
+		[Test]
+		public void RandomTests()
+		{
+			for (int i = 0; i < 40; i++)
+			{
+				var array = CreateArray();
+				var expected = ProductArraySolution(array);
+				Assert.That(ProductArrayTask.ProductArray(array), Is.EqualTo(expected));
+			}
+		}
+
+		int[] CreateArray()
+		{
+			var rnd = new Random();
+			var length = rnd.Next(3, 8);
+			var list = new List<int>();
+			for (int i = 0; i < length; i++)
+				list.Add(rnd.Next(1, 15));
+			return list.ToArray();
+		}
+		int[] ProductArraySolution(int[] array) => array.Select(x => array.Aggregate((a, b) => a * b) / x).ToArray();
+	}
 }
