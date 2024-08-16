@@ -19,6 +19,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void GhostbustersWhitespaceRemovalTest()
+				{
+					Assert.AreEqual("Factory", GhostbustersWhitespaceRemovalTask.GhostBusters("Factor y"), "Nope, there may still be a ghost in the building. Try again.");
+					Assert.AreEqual("Office", GhostbustersWhitespaceRemovalTask.GhostBusters("O  f fi ce"), "Nope, there may still be a ghost in the building. Try again.");
+					Assert.AreEqual("You just wanted my autograph didn't you?", GhostbustersWhitespaceRemovalTask.GhostBusters("BusStation"), "Nope, as there were no ghosts in the BusStation you need to return a witty retort.");
+				}
+
+				[Test]
                 public void WeHaveLiftoffTest()
                 {
 					Assert.AreEqual("10 9 8 7 6 5 4 3 2 1 liftoff!", WeHaveLiftoffTask.Liftoff(new List<int> { 2, 8, 10, 9, 1, 3, 4, 7, 6, 5 }));
