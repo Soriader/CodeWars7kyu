@@ -19,6 +19,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void FibonacciTest()
+				{
+					Assert.AreEqual(5, FibonacciTask.Fib(5));
+					Assert.AreEqual(55, FibonacciTask.Fib(10));
+				}
+
+				[Test]
 				public void MultiplyWordInStringTest()
 				{
 					Assert.AreEqual("is-is-is", MultiplyWordInStringTask.ModifyMultiply("is very easy to resolve that kata", 0, 3), "should return 'is-is-is'");
