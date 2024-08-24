@@ -19,6 +19,12 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void NameArrayCappingTest()
+				{
+					Assert.AreEqual(new string[] { "Expected" }, NameArrayCappingTask.CapMe(new string[] { "ExPeCteD" }));
+				}
+
+				[Test]
 				public void FindSumOfDiagonalsTest()
 				{
 					Assert.AreEqual(12, FindSumOfDiagonalsTask.DiagonalSum(new int[,] { { 12 } }));
