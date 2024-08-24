@@ -19,6 +19,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void RemoveAllExclamationMarksFromTheEndTest()
+				{
+					Assert.AreEqual("!!!Hi !!hi !hi", RemoveAllExclamationMarksFromTheEndTask.Remove("!!!Hi !!hi!!! !hi"));
+					Assert.AreEqual("Hi", RemoveAllExclamationMarksFromTheEndTask.Remove("Hi!"));
+					Assert.AreEqual("!Hi", RemoveAllExclamationMarksFromTheEndTask.Remove("!Hi!"));
+				}
+
+				[Test]
 				public void ReverseListTest()
 				{
 					Assert.AreEqual(new int[0], ReverseListTask.ReverseList(new int[0]));
