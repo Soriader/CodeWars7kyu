@@ -6,6 +6,7 @@ using System.Text;
 using static CodeWars7kyu.DisemvowelTrollsTask;
 using static CodeWars7kyu.WhoIsOnlineTask.User;
 using static CodeWars7kyu.WhoIsOnlineTask;
+using static CodeWars7kyu.MakingCopiesTask;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CodeWarsTest
@@ -18,6 +19,13 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				[Test]
+				public void MakingCopiesTest()
+				{
+					Assert.AreEqual(new int[] { 1, 2, 3, 4 }.ToList(), MakingCopiesTask.Copy(new int[] { 1, 2, 3, 4 }.ToList()));
+
+				}
+
 				[Test]
 				public void RemoveAllExclamationMarksFromTheEndTest()
 				{
