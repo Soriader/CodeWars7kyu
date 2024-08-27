@@ -20,6 +20,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void CatDogTest()
+				{
+					Assert.AreEqual((1, 1), CatDogTask.OwnedCatAndDog(15, 15));
+					Assert.AreEqual((2, 2), CatDogTask.OwnedCatAndDog(24, 24));
+					Assert.AreEqual((10, 10), CatDogTask.OwnedCatAndDog(56, 64));
+				}
+
+				[Test]
 				public void OdderThanTheRestTest()
 				{
 					Assert.AreEqual(3, OdderThanTheRestTask.OddOne(new List<int> { 2, 4, 6, 7, 10 }));
