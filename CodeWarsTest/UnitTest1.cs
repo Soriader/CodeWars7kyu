@@ -20,6 +20,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public static void EasyWallpaperTest()
+				{
+					Assert.AreEqual("sixteen", EasyWallpaperTask.WallPaper(6.3, 4.5, 3.29));
+					Assert.AreEqual("seventeen", EasyWallpaperTask.WallPaper(6.3, 5.8, 3.13));
+					Assert.AreEqual("zero", EasyWallpaperTask.WallPaper(7.9, 0, 5.4));
+				}
+
+				[Test]
 				public void SaveFilesTest()
 				{
 					Assert.AreEqual(3, ComputerProblemSeriesHardDiskDriveTask.Save(new int[] { 4, 4, 4, 3, 3 }, 12));
