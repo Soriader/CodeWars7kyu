@@ -20,6 +20,17 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void MoveAllExclamationMarksToTheEndOfTheSentenceTest()
+				{
+					Assert.AreEqual("Hi!", MoveAllExclamationMarksToTheEndOfTheSentenceTask.Remove("Hi!"));
+					Assert.AreEqual("Hi Hi!!", MoveAllExclamationMarksToTheEndOfTheSentenceTask.Remove("Hi! Hi!"));
+					Assert.AreEqual("Hi Hi Hi!!!", MoveAllExclamationMarksToTheEndOfTheSentenceTask.Remove("Hi! Hi! Hi!"));
+					Assert.AreEqual("Hi Hi Hi!!!", MoveAllExclamationMarksToTheEndOfTheSentenceTask.Remove("Hi! !Hi Hi!"));
+					Assert.AreEqual("Hi Hi Hi!!!", MoveAllExclamationMarksToTheEndOfTheSentenceTask.Remove("Hi! !Hi Hi!"));
+					Assert.AreEqual("Hi Hi Hi!!!!", MoveAllExclamationMarksToTheEndOfTheSentenceTask.Remove("Hi! Hi!! Hi!"));
+				}
+
+				[Test]
 				public static void EasyWallpaperTest()
 				{
 					Assert.AreEqual("sixteen", EasyWallpaperTask.WallPaper(6.3, 4.5, 3.29));
