@@ -19,7 +19,12 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
-				
+				[Test]
+				public void TriangularNumbersTest()
+				{
+					Assert.AreEqual(true, TriangularNumbersTask.IsTriangular(6));
+				}
+
 				[Test]
 				public void SlapheadTest()
 				{
