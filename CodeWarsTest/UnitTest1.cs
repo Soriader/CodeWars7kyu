@@ -19,6 +19,7 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				
 				[Test]
 				public void SlapheadTest()
 				{
