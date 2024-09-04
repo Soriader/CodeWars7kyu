@@ -20,6 +20,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void PossibilitiesArrayTest()
+				{
+					Assert.AreEqual(true, PossibilitiesArrayTask.IsAllPossibilities(new int[] { 0, 1, 2, 3 }));
+					Assert.AreEqual(false, PossibilitiesArrayTask.IsAllPossibilities(new int[] { 1, 2, 3, 4 }));
+				}
+
+				[Test]
 				public void DifferenceBetweenYaersTest()
 				{
 					Assert.AreEqual(18, DifferenceBetweenYaersTask.HowManyYears("1997/10/10", "2015/10/10"));
