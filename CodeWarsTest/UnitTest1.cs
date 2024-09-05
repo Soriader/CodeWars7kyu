@@ -3,7 +3,6 @@ using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System;
 using System.Reflection;
 using System.Text;
-using static CodeWars7kyu.DisemvowelTrollsTask;
 using static CodeWars7kyu.WhoIsOnlineTask.User;
 using static CodeWars7kyu.WhoIsOnlineTask;
 using static CodeWars7kyu.MakingCopiesTask;
@@ -19,6 +18,16 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				[Test]
+				public void HappyBirthdayDarlingTest()
+				{
+					Assert.AreEqual("32? That's just 20, in base 16!", HappyBirthdayDarlingTask.WomensAge(32));
+					Assert.AreEqual("39? That's just 21, in base 19!", HappyBirthdayDarlingTask.WomensAge(39));
+					Assert.AreEqual("22? That's just 20, in base 11!", HappyBirthdayDarlingTask.WomensAge(22));
+					Assert.AreEqual("65? That's just 21, in base 32!", HappyBirthdayDarlingTask.WomensAge(65));
+					Assert.AreEqual("83? That's just 21, in base 41!", HappyBirthdayDarlingTask.WomensAge(83));
+				}
+
 				[Test]
 				public void PowersOfITest()
 				{
@@ -2545,9 +2554,9 @@ namespace CodeWarsTest
                 [Test]
                 public void DisemvowelTrollsTest()
                 {
-                    Assert.AreEqual("Ths wbst s fr lsrs LL!", Kata.Disemvowel("This website is for losers LOL!"));
-                    Assert.AreEqual("Wht r y,  cmmnst?", Kata.Disemvowel("What are you, a communist?"));
-                    Assert.AreEqual("N ffns bt,\nYr wrtng s mng th wrst 'v vr rd", Kata.Disemvowel("No offense but,\nYour writing is among the worst I've ever read"));
+                    Assert.AreEqual("Ths wbst s fr lsrs LL!", DisemvowelTrollsTask.Disemvowel("This website is for losers LOL!"));
+                    Assert.AreEqual("Wht r y,  cmmnst?", DisemvowelTrollsTask.Disemvowel("What are you, a communist?"));
+                    Assert.AreEqual("N ffns bt,\nYr wrtng s mng th wrst 'v vr rd", DisemvowelTrollsTask.Disemvowel("No offense but,\nYour writing is among the worst I've ever read"));
                 }
 
                 [Test]

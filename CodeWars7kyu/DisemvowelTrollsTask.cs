@@ -8,19 +8,16 @@ namespace CodeWars7kyu
 {
     public class DisemvowelTrollsTask
     {
-        public static class Kata
+        public static string Disemvowel(string str)
         {
-            public static string Disemvowel(string str)
+            string lettersToRemove = "aeiouAEIOU";
+
+            foreach (char letter in lettersToRemove)
             {
-                string lettersToRemove = "aeiouAEIOU";
-
-                foreach (char letter in lettersToRemove)
-                {
-                    str = str.Replace(letter.ToString(), string.Empty);
-                }
-
-                return str;
+                str = str.Replace(letter.ToString(), string.Empty);
             }
+
+            return str;
         }
     }
 }
