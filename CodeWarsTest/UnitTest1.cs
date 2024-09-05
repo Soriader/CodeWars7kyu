@@ -19,6 +19,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void CompleteThePatternTest()
+				{
+					Assert.AreEqual("1", CompleteThePatternTask.Pattern(1));
+					Assert.AreEqual("12\n2", CompleteThePatternTask.Pattern(2));
+					Assert.AreEqual("12345\n2345\n345\n45\n5", CompleteThePatternTask.Pattern(5));
+				}
+
+				[Test]
 				public void HappyBirthdayDarlingTest()
 				{
 					Assert.AreEqual("32? That's just 20, in base 16!", HappyBirthdayDarlingTask.WomensAge(32));
