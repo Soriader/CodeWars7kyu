@@ -19,6 +19,15 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public static void FindTheLongestGapTest()
+				{
+					Assert.AreEqual(2, FindTheLongestGapTask.Gap(9));
+					Assert.AreEqual(4, FindTheLongestGapTask.Gap(529));
+					Assert.AreEqual(1, FindTheLongestGapTask.Gap(20));
+					Assert.AreEqual(0, FindTheLongestGapTask.Gap(15));
+				}
+
+				[Test]
 				public void SprayingTreesTest()
 				{
 					Assert.AreEqual("It is Wednesday today, Robert, you have to work, you must spray 10 trees and you need 20 dollars to buy liquid", SprayingTreesTask.Task("Wednesday", 10, 2));
