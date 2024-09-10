@@ -19,6 +19,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void NumberPairsTest()
+				{
+					int[] arr1 = new int[] { 13, 64, 5, 7, 88 };
+					int[] arr2 = new int[] { 23, 4, 53, 17, 80 };
+					Assert.AreEqual(NumberPairsTask.GetLargerNumbers(arr1, arr2), new int[] { 23, 64, 53, 17, 88 });
+				}
+				[Test]
 				public void FindTheIndexOfTest()
 				{
 					Assert.AreEqual(3, FindTheIndexOfTask.SecondSymbol("Hello world!!", 'l'), "Find the index of the second symbol \"l\" in the string");
