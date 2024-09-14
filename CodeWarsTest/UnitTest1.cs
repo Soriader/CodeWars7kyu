@@ -19,13 +19,22 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
-				public void SampleTest()
+				public void MoveAllVowelsTest()
+				{
+					Assert.That(MoveAllVowelsTask.MoveVowel("day"), Is.EqualTo("dya"));
+					Assert.That(MoveAllVowelsTask.MoveVowel("apple"), Is.EqualTo("pplae"));
+					Assert.That(MoveAllVowelsTask.MoveVowel("peace"), Is.EqualTo("pceae"));
+					Assert.That(MoveAllVowelsTask.MoveVowel("maker"), Is.EqualTo("mkrae"));
+				}
+
+				[Test]
+				public void TheRejectFunctionTest()
 				{
 					Assert.AreEqual(new int[] { 1, 3, 5 }, TheRejectFunctionTask.Reject(new int[] { 1, 2, 3, 4, 5, 6 }, (n) => n % 2 == 0));
 				}
 
 				[Test]
-				public static void test1()
+				public static void ScalingSquaredStringsTest()
 				{
                     
 					string a = "abcd\nefgh\nijkl\nmnop";
