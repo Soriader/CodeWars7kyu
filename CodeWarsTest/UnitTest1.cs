@@ -19,6 +19,12 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void SampleTest()
+				{
+					Assert.AreEqual(new int[] { 1, 3, 5 }, TheRejectFunctionTask.Reject(new int[] { 1, 2, 3, 4, 5, 6 }, (n) => n % 2 == 0));
+				}
+
+				[Test]
 				public static void test1()
 				{
                     
