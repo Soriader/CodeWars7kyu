@@ -19,6 +19,17 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void RemoveAllExclamationMarksFromSentenceExceptAtTheEndTest()
+				{
+					Assert.AreEqual("Hi!", RemoveAllExclamationMarksFromSentenceExceptAtTheEndTask.Remove("Hi!"));
+					Assert.AreEqual("Hi!!!", RemoveAllExclamationMarksFromSentenceExceptAtTheEndTask.Remove("Hi!!!"));
+					Assert.AreEqual("Hi", RemoveAllExclamationMarksFromSentenceExceptAtTheEndTask.Remove("!Hi"));
+					Assert.AreEqual("Hi!", RemoveAllExclamationMarksFromSentenceExceptAtTheEndTask.Remove("!Hi!"));
+					Assert.AreEqual("Hi Hi!", RemoveAllExclamationMarksFromSentenceExceptAtTheEndTask.Remove("Hi! Hi!"));
+					Assert.AreEqual("Hi", RemoveAllExclamationMarksFromSentenceExceptAtTheEndTask.Remove("Hi"));
+				}
+
+				[Test]
 				public void ProductOfLargestPairTest()
 				{
 					Assert.AreEqual(218842, ProductOfLargestPairTask.MaxProduct(new int[] { 56, 335, 195, 443, 6, 494, 252 }));
