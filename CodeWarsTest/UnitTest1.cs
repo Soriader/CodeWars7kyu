@@ -19,6 +19,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void SuzukiNeedsHelpLiningUpTest()
+				{
+					string students = "Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi";
+					string[] expected = { "Takehiko", "Takayuki", "Takahiro", "Takeshi", "Takeshi", "Takashi", "Tadashi", "Takeo", "Takao" };
+					Assert.AreEqual(expected, SuzukiNeedsHelpLiningUpTask.LineupStudents(students));
+				}
+
+				[Test]
 				public void HeadTailInitLastTest()
 				{
 					Assert.AreEqual(5, HeadTailInitLastTask.Head(new List<int> { 5, 1 }));
