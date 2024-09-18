@@ -19,6 +19,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+                public void FloatPrecisionTest()
+                {
+					Assert.AreEqual(2.34, FloatPrecisionTask.Round(2.34));
+					Assert.AreEqual(5.68, FloatPrecisionTask.Round(5.678));
+				}
+
+				[Test]
 				public void MostValuableCharacterTest()
 				{
 					Assert.AreEqual('a', MostValuableCharacterTask.Solve("a"));
