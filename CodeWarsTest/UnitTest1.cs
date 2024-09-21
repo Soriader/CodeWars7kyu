@@ -19,6 +19,23 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void GetNthNodeTest()
+				{
+					GetNthNodeTask head = new GetNthNodeTask(1);
+					head.Next = new GetNthNodeTask(2);
+					head.Next.Next = new GetNthNodeTask(3);
+
+					GetNthNodeTask result = GetNthNodeTask.GetNth(head, 0);
+					Assert.AreEqual(1, result.Data);
+
+					result = GetNthNodeTask.GetNth(head, 1);
+					Assert.AreEqual(2, result.Data);
+
+					result = GetNthNodeTask.GetNth(head, 2);
+					Assert.AreEqual(3, result.Data);
+				}
+
+				[Test]
 				public void PairsOfIntegersFromTest()
 				{
 					Act(2, 4, new[] { (2, 2), (2, 3), (2, 4), (3, 3), (3, 4), (4, 4) });
