@@ -19,6 +19,15 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void ConsecutiveLettersTest()
+				{
+					Assert.AreEqual(true, ConsecutiveLettersTask.Solve("abc"));
+					Assert.AreEqual(false, ConsecutiveLettersTask.Solve("abd"));
+					Assert.AreEqual(true, ConsecutiveLettersTask.Solve("dabc"));
+					Assert.AreEqual(false, ConsecutiveLettersTask.Solve("abbc"));
+				}
+
+				[Test]
 				public void EasyTimeConvertTest()
 				{
 					Assert.AreEqual("00:00", EasyTimeConvertTask.TimeConvert(0));
