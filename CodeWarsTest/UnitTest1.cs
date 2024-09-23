@@ -19,6 +19,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void IsItALetterTest()
+				{
+					Assert.AreEqual(true, IsItALetterTask.IsItLetter('a'));
+					Assert.AreEqual(false, IsItALetterTask.IsItLetter('1'));
+				}
+
+				[Test]
 				public void IsEvenBitwiseSeriesTest()
 				{
 					Assert.AreEqual(true, IsEvenBitwiseSeriesTask.IsEven(2), "2 is even");
