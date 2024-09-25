@@ -7,6 +7,7 @@ using static CodeWars7kyu.WhoIsOnlineTask.User;
 using static CodeWars7kyu.WhoIsOnlineTask;
 using static CodeWars7kyu.MakingCopiesTask;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static CodeWars7kyu.RockPaperScissorsLizardSpockTask;
 
 namespace CodeWarsTest
 {
@@ -18,6 +19,15 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				[Test]
+				public void RockPaperScissorsLizardSpockTest()
+                { 
+					Assert.AreEqual(Ordering.LT, RockPaperScissorsLizardSpockTask.Rpsls(Value.Rock, Value.Lizard));
+					Assert.AreEqual(Ordering.EQ, RockPaperScissorsLizardSpockTask.Rpsls(Value.Rock, Value.Rock));
+					Assert.AreEqual(Ordering.GT, RockPaperScissorsLizardSpockTask.Rpsls(Value.Paper, Value.Scissors));
+
+				}
+
 				[Test]
 				public void ThePoetAndThePendulumTest()
 				{
