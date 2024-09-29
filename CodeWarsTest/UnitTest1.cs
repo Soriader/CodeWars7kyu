@@ -20,6 +20,12 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void SPoNgEbObMeMeTest()
+				{
+					Assert.AreEqual("StOp mAkInG SpOnGeBoB MeMeS!", SPoNgEbObMeMeTask.SpongeMeme("stop Making spongebob Memes!"));
+				}
+
+				[Test]
 				public void AverageArrayTest()
 				{
 					Assert.AreEqual(new double[] { 3, 4, 5, 6 }, AverageArrayTask.AvgArray(new double[][] { new double[] { 1, 2, 3, 4 }, new double[] { 5, 6, 7, 8 } }));
