@@ -20,6 +20,12 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void ShadesOfGreyTest()
+				{
+					Assert.AreEqual(254, ShadesOfGreyTask.ShadesOfGrey(255).Length);
+					CollectionAssert.AreEquivalent(new[] { "#010101", "#020202", "#030303", "#040404", "#050505","#060606", "#070707", "#080808", "#090909", "#0a0a0a"},ShadesOfGreyTask.ShadesOfGrey(10));
+				}
+				[Test]
 				public void IntegerDifferenceTest()
 				{
 					Assert.AreEqual(3, IntegerDifferenceTask.IntDiff(new int[] { 1, 1, 5, 6, 9, 16, 27 }, 4));
