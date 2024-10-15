@@ -20,6 +20,12 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void OddLadderTest()
+				{
+					Assert.AreEqual("1\n333", OddLadderTask.OddLadder(4), "Nope!");
+				}
+
+				[Test]
 				public void VampireNumbersTest()
 				{
 					Assert.AreEqual(true, VampireNumbersTask.Vampire(21, 6), "Basic: 21 * 6 = 126 should return True");
