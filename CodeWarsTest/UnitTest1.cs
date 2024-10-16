@@ -20,6 +20,15 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void CaffeineScriptTest()
+				{
+					Assert.AreEqual("mocha_missing!", CaffeineScriptTask.CaffeineBuzz(1));
+					Assert.AreEqual("Java", CaffeineScriptTask.CaffeineBuzz(3));
+					Assert.AreEqual("JavaScript", CaffeineScriptTask.CaffeineBuzz(6));
+					Assert.AreEqual("CoffeeScript", CaffeineScriptTask.CaffeineBuzz(12));
+			    }
+
+				[Test]
 				public void Ch4113ng3Test()
 				{
 					Assert.AreEqual("S3v3n", Ch4113ng3Task.Nerdify("Seven"));
