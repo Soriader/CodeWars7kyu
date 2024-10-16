@@ -20,6 +20,15 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void Ch4113ng3Test()
+				{
+					Assert.AreEqual("S3v3n", Ch4113ng3Task.Nerdify("Seven"));
+					Assert.AreEqual("Fund4m3nt41s", Ch4113ng3Task.Nerdify("Fund4m3nt41s"));
+					Assert.AreEqual("Los 4ng313s", Ch4113ng3Task.Nerdify("Los Angeles"));
+
+				}
+
+				[Test]
 				public void OddLadderTest()
 				{
 					Assert.AreEqual("1\n333", OddLadderTask.OddLadder(4), "Nope!");
