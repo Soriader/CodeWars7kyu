@@ -20,6 +20,16 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void TurkishNumbersTest()
+				{
+					int[] exampleInputs = new int[] { 1, 13, 27, 38, 77, 94 };
+					string[] exampleOutputs = new string[] { "bir", "on üç", "yirmi yedi", "otuz sekiz", "yetmiº yedi", "doksan dört" };
+
+					for (int i = 0; i < exampleInputs.Length; i++)
+						Assert.AreEqual(exampleOutputs[i], TurkishNumbersTask.GetTurkishNumber(exampleInputs[i]));
+				}
+
+				[Test]
 				public void CaffeineScriptTest()
 				{
 					Assert.AreEqual("mocha_missing!", CaffeineScriptTask.CaffeineBuzz(1));
