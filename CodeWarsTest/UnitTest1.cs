@@ -20,6 +20,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+                public void SlopeOfALineTest()
+                {
+					Assert.AreEqual(1, SlopeOfALineTask.GetSlope(new Point(1, 1), new Point(2, 2)));
+					Assert.AreEqual(-1, SlopeOfALineTask.GetSlope(new Point(11, 1), new Point(1, 11)));
+					Assert.AreEqual(null, SlopeOfALineTask.GetSlope(new Point(1, 1), new Point(1, 1)));
+				}
+
+				[Test]
 				public void TurkishNumbersTest()
 				{
 					int[] exampleInputs = new int[] { 1, 13, 27, 38, 77, 94 };
