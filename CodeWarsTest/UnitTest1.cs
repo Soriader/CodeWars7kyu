@@ -20,6 +20,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void IsValidIdentifierTest()
+				{
+					Assert.IsFalse(IsValidIdentifierTask.IsValid("1i"));
+					Assert.IsTrue(IsValidIdentifierTask.IsValid("i1"));
+				}
+
+				[Test]
                 public void SlopeOfALineTest()
                 {
 					Assert.AreEqual(1, SlopeOfALineTask.GetSlope(new Point(1, 1), new Point(2, 2)));
