@@ -19,3 +19,4 @@ namespace CodeWars7kyu
 		}
 	}
 }
+//https://www.codewars.com/kata/59619e4609868dd923000041/train/csharp
