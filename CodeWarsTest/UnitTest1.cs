@@ -20,6 +20,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public static void HeroRootTest()
+				{
+					Assert.AreEqual(4, HeroRootTask.IntRac(25, 1));
+					Assert.AreEqual(3, HeroRootTask.IntRac(125348, 300));
+				}
+
+				[Test]
 				public void IsValidIdentifierTest()
 				{
 					Assert.IsFalse(IsValidIdentifierTask.IsValid("1i"));
