@@ -20,6 +20,16 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void SushiGoRoundTest()
+				{
+					Assert.AreEqual(4, SushiGoRoundTask.TotalBill("rr"));
+					Assert.AreEqual(8, SushiGoRoundTask.TotalBill("rr rrr"));
+					Assert.AreEqual(16, SushiGoRoundTask.TotalBill("rr rrr rrr rr"));
+					Assert.AreEqual(34, SushiGoRoundTask.TotalBill("rrrrrrrrrrrrrrrrrr   rr r"));
+					Assert.AreEqual(0, SushiGoRoundTask.TotalBill(""));
+				}
+
+				[Test]
 				public static void HeroRootTest()
 				{
 					Assert.AreEqual(4, HeroRootTask.IntRac(25, 1));
