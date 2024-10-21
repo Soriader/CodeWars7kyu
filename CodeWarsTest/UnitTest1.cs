@@ -20,6 +20,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void OffloadYourWorkTest()
+				{
+					var arr = new int[][] { new[] { 1, 0 } };
+					Assert.That(OffloadYourWorkTask.WorkNeeded(60, arr), Is.EqualTo("Easy Money!"));
+				}
+
+				[Test]
 				public void CountTheNumberOfExclamationMarksTest()
 				{
 					Assert.AreEqual(0, CountTheNumberOfExclamationMarksTask.Product(""));
