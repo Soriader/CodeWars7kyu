@@ -20,6 +20,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public static void ConvertingIntegerToCurrencyFormatTest()
+				{
+					Assert.AreEqual("5,678,545", ConvertingIntegerToCurrencyFormatTask.ToCurrency(5678545));
+					Assert.AreEqual("100,000", ConvertingIntegerToCurrencyFormatTask.ToCurrency(100000));
+				}
+
+				[Test]
 				public static void CompoundArrayTest()
 				{
 					Assert.AreEqual(new int[] { 1, 9, 2, 8, 3, 7, 4, 6, 5, 6 },
