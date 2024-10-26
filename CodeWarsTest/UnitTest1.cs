@@ -20,6 +20,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void BorrowerSpeakTest()
+				{
+					Assert.AreEqual("whatfickdamncake", BorrowerSpeakTask.Borrow("WhAt! FiCK! DaMn CAke?"));
+					Assert.AreEqual("thebigpeoplehere", BorrowerSpeakTask.Borrow("THE big PeOpLE Here!!"));
+					Assert.AreEqual("iamatinyboy", BorrowerSpeakTask.Borrow("i AM a TINY BoY!!"));
+				}
+
+				[Test]
 				public static void ConvertingIntegerToCurrencyFormatTest()
 				{
 					Assert.AreEqual("5,678,545", ConvertingIntegerToCurrencyFormatTask.ToCurrency(5678545));
