@@ -8,6 +8,7 @@ using static CodeWars7kyu.WhoIsOnlineTask;
 using static CodeWars7kyu.MakingCopiesTask;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static CodeWars7kyu.RockPaperScissorsLizardSpockTask;
+using System.Numerics;
 
 namespace CodeWarsTest
 {
@@ -19,6 +20,20 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				[Test]
+				public static void EasyLineTest()
+				{
+					static void testing(BigInteger actual, BigInteger expected)
+					{
+						Assert.AreEqual(expected, actual);
+					}
+
+					testing(EasyLineTask.EasyLine(7), BigInteger.Parse("3432"));
+					testing(EasyLineTask.EasyLine(13), BigInteger.Parse("10400600"));
+					testing(EasyLineTask.EasyLine(17), BigInteger.Parse("2333606220"));
+					testing(EasyLineTask.EasyLine(19), BigInteger.Parse("35345263800"));
+				}
+
 				[Test]
 				public void KatastropheTest()
 				{
