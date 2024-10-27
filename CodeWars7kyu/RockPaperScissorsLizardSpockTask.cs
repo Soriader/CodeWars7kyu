@@ -29,6 +29,7 @@ namespace CodeWars7kyu
 
 			return Ordering.LT;
 		}
+
 	}
 }
 //https://www.codewars.com/kata/57d29ccda56edb4187000052/train/csharp

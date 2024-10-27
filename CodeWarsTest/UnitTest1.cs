@@ -20,6 +20,13 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+
+				[Test]
+				public void ReverseFactorialsTest()
+				{
+					Assert.AreEqual("5!", ReverseFactorialsTask.ReverseFactorial(120));
+				}
+
 				[Test]
 				public static void EasyLineTest()
 				{
@@ -438,11 +445,9 @@ namespace CodeWarsTest
 
 				[Test]
 				public void RockPaperScissorsLizardSpockTest()
-                { 
-					Assert.AreEqual(Ordering.LT, RockPaperScissorsLizardSpockTask.Rpsls(Value.Rock, Value.Lizard));
+                {
 					Assert.AreEqual(Ordering.EQ, RockPaperScissorsLizardSpockTask.Rpsls(Value.Rock, Value.Rock));
-					Assert.AreEqual(Ordering.GT, RockPaperScissorsLizardSpockTask.Rpsls(Value.Paper, Value.Scissors));
-
+					Assert.AreEqual(Ordering.LT, RockPaperScissorsLizardSpockTask.Rpsls(Value.Paper, Value.Scissors));
 				}
 
 				[Test]

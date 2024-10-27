@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodeWars7kyu
 {
-	public class OddLadderTask
+	public static class OddLadderTask
 	{
 		public static string OddLadder(int n)
 		{
@@ -17,15 +17,15 @@ namespace CodeWars7kyu
 
 			StringBuilder result = new StringBuilder();
 
-			for (int i = 1; i <= n; i += 2)
+			for (int i = 1; i <= n; i += 2)  
 			{
-				string repeated = string.Concat(Enumerable.Repeat(i.ToString(), i));
-
-				result.AppendLine(repeated);
+				string repeated = new string(i.ToString()[0], i);
+				result.Append(repeated + "\n");  
 			}
 
-			return result.ToString().TrimEnd();
+			return result.ToString().TrimEnd('\n');
 		}
 	}
+
 }
 //https://www.codewars.com/kata/5574940eae1cf7d520000076/train/csharp
