@@ -21,6 +21,19 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void GreenGlassDoorTest()
+				{
+					Assert.AreEqual(true, GreenGlassDoorTask.StepThroughWith("moon"));
+					Assert.AreEqual(false, GreenGlassDoorTask.StepThroughWith("test"));
+					Assert.AreEqual(true, GreenGlassDoorTask.StepThroughWith("glasses"));
+					Assert.AreEqual(false, GreenGlassDoorTask.StepThroughWith("airplane"));
+					Assert.AreEqual(true, GreenGlassDoorTask.StepThroughWith("free"));
+					Assert.AreEqual(false, GreenGlassDoorTask.StepThroughWith("branch"));
+					Assert.AreEqual(true, GreenGlassDoorTask.StepThroughWith("aardvark"));
+				}
+
+
+				[Test]
 				public void CompleteThePatternThreeTest()
 				{
 					Assert.AreEqual("1", CompleteThePatternThreeTask.Pattern(1));
