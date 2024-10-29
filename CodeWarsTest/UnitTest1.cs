@@ -21,6 +21,28 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void NaughtyOrNiceTest()
+				{
+					var naughty = new List<NaughtyOrNiceTask> {
+	new NaughtyOrNiceTask("Marco", false),
+	new NaughtyOrNiceTask("Luc", false),
+};
+					var nice = new List<NaughtyOrNiceTask> {
+	new NaughtyOrNiceTask("Ryan", true),
+	new NaughtyOrNiceTask("Barak", true),
+};
+
+					var both = naughty.Concat(nice);
+
+					Assert.AreEqual(0, NaughtyOrNiceTask.GetNiceNames(naughty).Count(), "Wrong number of nice names");
+					Assert.AreEqual(0, NaughtyOrNiceTask.GetNaughtyNames(nice).Count(), "Wrong number of naughty names");
+					Assert.AreEqual("Ryan,Barak", string.Join(",", NaughtyOrNiceTask.GetNiceNames(nice)));
+					Assert.AreEqual("Marco,Luc", string.Join(",", NaughtyOrNiceTask.GetNaughtyNames(naughty)));
+					Assert.AreEqual("Ryan,Barak", string.Join(",", NaughtyOrNiceTask.GetNiceNames(both)));
+					Assert.AreEqual("Marco,Luc", string.Join(",", NaughtyOrNiceTask.GetNaughtyNames(both)));
+				}
+
+				[Test]
 				public void DistanceFromTheAverageTest()
 				{
 					Assert.AreEqual(new[] { 4.2, -35.8, -2.8, 23.2, 11.2 }, DistanceFromTheAverageTask.DistancesFromAverage(new[] { 55, 95, 62, 36, 48 }));
