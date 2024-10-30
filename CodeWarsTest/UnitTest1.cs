@@ -21,6 +21,17 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public static void BuildingSpheresTest()
+				{
+					BuildingSpheresTask ball = new BuildingSpheresTask(2, 50);
+					Assert.AreEqual(2, ball.GetRadius(), "Check radius");
+					Assert.AreEqual(50, ball.GetMass(), "Check mass");
+					Assert.AreEqual(33.51032, ball.GetVolume(), "Check volume");
+					Assert.AreEqual(50.26548, ball.GetSurfaceArea(), "Check area");
+					Assert.AreEqual(1.49208, ball.GetDensity(), "Check density");
+				}
+
+				[Test]
 				public void FindMissingNumbersTest()
 				{
 					Assert.AreEqual(new int[] { -1, 0, 2, 3 }, FindMissingNumbersTask.FindMissingNumbers(new int[] { -3, -2, 1, 4 }));
