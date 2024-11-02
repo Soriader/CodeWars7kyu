@@ -10,12 +10,7 @@ namespace CodeWars7kyu
 	{
 		public static string NextLetter(string str)
 		{
-			Dictionary<char, int> alphabets = new Dictionary<char, int>();
 			string result = "";
-			for (char letter = 'a'; letter <= 'z'; letter++) 
-			{
-				alphabets[letter] = letter - 'a' + 1;
-			}
 
 			for (int i = 0; i < str.Length; i++)
 			{
