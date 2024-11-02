@@ -21,6 +21,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void WeirdWordsTest()
+				{
+					Assert.AreEqual("Nz Obnf Jt App", WeirdWordsTask.NextLetter("My Name Is Zoo"));
+					Assert.AreEqual("Xibu jt zpvs obnf", WeirdWordsTask.NextLetter("What is your name"));
+					Assert.AreEqual("aPp", WeirdWordsTask.NextLetter("zOo"));
+				}
+
+				[Test]
 				public void SpotTheDifferencesTest()
 				{
 					Assert.AreEqual(new List<int> { 3, 5 }, SpotTheDifferencesTask.Spot("abcdefg", "abcqetg"));
