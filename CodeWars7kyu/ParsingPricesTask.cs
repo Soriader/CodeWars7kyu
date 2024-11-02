@@ -11,9 +11,7 @@ namespace CodeWars7kyu
 	{
 		public static int? ToCents(string price)
 		{
-			Match m = Regex.Match(price, @"\$\d+\.\d{2}");
-			return m.Success && m.Value == price ? (int)(decimal.Parse(m.Value.Substring(1)) * 100) : (int?)null;
-
+			return Regex.IsMatch(price, @"\A\$\d+\.\d\d\z") ? Convert.ToInt32(Regex.Replace(price.Substring(1), @"\.", "")) : null;
 		}
 	}
 }
