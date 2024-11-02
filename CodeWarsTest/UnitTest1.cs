@@ -21,6 +21,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void AcrosticReaderTest()
+				{
+					Assert.AreEqual("JACK", AcrosticReaderTask.ReadOut(new string[] { "Jolly", "Amazing", "Courteous", "Keen" }));
+					Assert.AreEqual("MEG", AcrosticReaderTask.ReadOut(new string[] { "Marvelous", "Excellent", "Gifted" }));
+				}
+
+				[Test]
 				public void HungarianVowelHarmonyTest()
 				{
 					Assert.AreEqual("ablaknak", HungarianVowelHarmonyTask.Dative("ablak"));
