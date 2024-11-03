@@ -12,7 +12,7 @@ namespace CodeWars7kyu
 		{
 			Dictionary<int, int> doubletonMap = new Dictionary<int, int>(); 	
 			bool isDoubleton = false;
-			var check = num +1;
+			var check = num + 1;
 
 			while (!isDoubleton)
 			{
