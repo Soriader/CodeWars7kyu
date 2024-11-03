@@ -21,6 +21,15 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void DoubletonNumberTest()
+				{
+					Assert.AreEqual(121, DoubletonNumberTask.Doubleton(120));
+					Assert.AreEqual(1311, DoubletonNumberTask.Doubleton(1234));
+					Assert.AreEqual(12, DoubletonNumberTask.Doubleton(10));
+
+				}
+
+				[Test]
 				public void MobileDisplayKeystrokesTest()
 				{
 					Assert.AreEqual(0, MobileDisplayKeystrokesTask.MobileKeyboard(""));
