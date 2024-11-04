@@ -21,6 +21,15 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void NegationOfAValueTest()
+				{
+					Assert.AreEqual(true, NegationOfAValueTask.NegationValue("!", false));
+					Assert.AreEqual(false, NegationOfAValueTask.NegationValue("!", true));
+					Assert.AreEqual(true, NegationOfAValueTask.NegationValue("!!!", false));
+
+				}
+
+				[Test]
 				public void CompleteThePatternEvenLadderTest()
 				{
 					Assert.AreEqual("22", CompleteThePatternEvenLadderTask.Pattern(2));
