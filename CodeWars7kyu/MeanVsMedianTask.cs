@@ -16,7 +16,6 @@ namespace CodeWars7kyu
 			long sum = numbers.Sum(x => (long)x);
 			double mean = (double)sum / numbers.Length;
 
-			// Porównujemy wartości
 			if (median > mean)
 			{
 				return "median";
