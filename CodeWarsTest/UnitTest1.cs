@@ -21,6 +21,16 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void PasswordSystemTest()
+				{
+					string expected = "Yes";
+
+					string actual = PasswordSystemTask.HelpZoom(new int[] { 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1 });
+
+					Assert.AreEqual(expected, actual);
+				}
+
+				[Test]
 				public void MeanVsMedianTest()
 				{
 					Assert.AreEqual("median", MeanVsMedianTask.MeanVsMedian(new int[] { 7, 14, -70 }));
