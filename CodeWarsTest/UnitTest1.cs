@@ -21,6 +21,19 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void InternationalMorseCodeEncryptionTest()
+				{
+					void Test(string morse, string english)
+					{
+						Assert.AreEqual(morse, InternationalMorseCodeEncryptionTask.ToMorse(english));
+					}
+
+					string english = "SOS";
+					string morse = "... --- ...";
+					Test(morse, english);
+				}
+
+				[Test]
 				public void IsTuringEquationTest()
 				{
 					Assert.That(IsTuringEquationTask.IsTuringEquation("73+42=16"), Is.EqualTo(true));
