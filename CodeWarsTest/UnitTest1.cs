@@ -20,8 +20,9 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+
 				[Test]
-				public void BasicTest()
+				public void TurnAnyWordIntoABeefTacoTest()
 				{
 					Assert.AreEqual(new string[] { "shell", "shell" }, TurnAnyWordIntoABeefTacoTask.Tacofy(""));
 					Assert.AreEqual(new string[] { "shell", "beef", "shell" }, TurnAnyWordIntoABeefTacoTask.Tacofy("a"));
