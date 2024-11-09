@@ -21,6 +21,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void MyTest()
+				{
+					Assert.AreEqual(GetInitialsFromPersonNameTask.ToInitials("Kerry King"), "K. K.");
+					Assert.AreEqual(GetInitialsFromPersonNameTask.ToInitials("Tom Araya"), "T. A.");
+				}
+
+				[Test]
 				public void NumberClimberTest()
 				{
 					Assert.AreEqual(string.Join(",", new int[] { 1 }), string.Join(",", NumberClimberTask.Climb(1)));
