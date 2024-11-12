@@ -21,6 +21,16 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void StackedBalls2DTest()
+				{
+					double EPSILON = 0.001;
+
+					Assert.AreEqual(1.866, StackedBalls2DTask.StackHeight2d(2), EPSILON);
+					Assert.AreEqual(1.0, StackedBalls2DTask.StackHeight2d(1), EPSILON);
+
+				}
+
+				[Test]
 				public void ClosestToZeroTest()
 				{
 					Assert.AreEqual(1, ClosestToZeroTask.Closest(new int[] { 10, 3, 9, 1 }));
