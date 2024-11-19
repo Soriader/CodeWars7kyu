@@ -21,6 +21,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void DescribeAListTest()
+				{
+					Assert.AreEqual("empty", DescribeAListTask.DescribeList(new List<int>()));
+					Assert.AreEqual("singleton", DescribeAListTask.DescribeList(new List<int>() { 2}));
+					Assert.AreEqual("longer", DescribeAListTask.DescribeList(new List<int>() { 2, 3 }));
+				}
+
+				[Test]
 				public void TrimmingAStringTest()
 				{
 					Assert.AreEqual("Creating ka...", TrimmingAStringTask.TrimString("Creating kata is fun", 14));
