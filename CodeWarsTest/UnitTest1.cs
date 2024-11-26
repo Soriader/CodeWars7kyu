@@ -21,6 +21,17 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void PatternCraftVisitorTask()
+				{
+					IVisitor bullet = new TankBullet();
+					IArmoredUnit armored = new Marauder();
+
+					armored.Accept(bullet);
+
+					Assert.AreEqual(125 - 32, armored.Health);
+				}
+
+				[Test]
 				public void ChineseZodiacTest()
 				{
 					Assert.AreEqual("Wood Snake", ChineseZodiacTask.ChineseZodiac(1965));
