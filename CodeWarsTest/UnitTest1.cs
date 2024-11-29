@@ -21,6 +21,12 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void OperationsWithSequenceTest()
+				{
+					Assert.AreEqual(31, OperationsWithSequenceTask.Calc(new[] { 0, 2, 1, -6, -3, 3 }));
+				}
+
+				[Test]
 				public void FridayThe13thPartOneTest()
 				{
 					Dictionary<string, int> counselors = new Dictionary<string, int>
