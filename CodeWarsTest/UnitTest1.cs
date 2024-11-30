@@ -21,6 +21,14 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void PutALetterInAColumnTest()
+				{
+					Assert.AreEqual("| | |A| | | | | | |", PutALetterInAColumnTask.BuildRowText(2, 'A'));
+					Assert.AreEqual("|A| | | | | | | | |", PutALetterInAColumnTask.BuildRowText(0, 'A'));
+					Assert.AreEqual("| | | | | | | | |A|", PutALetterInAColumnTask.BuildRowText(8, 'A'));
+				}
+
+				[Test]
 				public void OperationsWithSequenceTest()
 				{
 					Assert.AreEqual(31, OperationsWithSequenceTask.Calc(new[] { 0, 2, 1, -6, -3, 3 }));
