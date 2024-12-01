@@ -1,4 +1,4 @@
-using CodeWars7kyu;
+﻿using CodeWars7kyu;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System;
 using System.Reflection;
@@ -20,6 +20,15 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				[Test]
+				public void HeavyMetalTest()
+				{
+					Assert.AreEqual("Ännöüncïng thë Mäcböök Äïr Güïtär", HeavyMetalTask.HeavyMetalUmlauts("Announcing the Macbook Air Guitar"));
+					Assert.AreEqual("Fäcëböök ïntrödücës nëw hëävÿ mëtäl rëäctïön büttöns", HeavyMetalTask.HeavyMetalUmlauts("Facebook introduces new heavy metal reaction buttons"));
+					Assert.AreEqual("Ströng sälës öf Gööglë's VR Mëtälhëädsëts sënd tëch stöck prïcës söärïng", HeavyMetalTask.HeavyMetalUmlauts("Strong sales of Google's VR Metalheadsets send tech stock prices soaring"));
+					Assert.AreEqual("Vëgän Bläck Mëtäl Chëf hïts thë bïg tïmë ön Ämäzön TV", HeavyMetalTask.HeavyMetalUmlauts("Vegan Black Metal Chef hits the big time on Amazon TV"));
+				}
+
 				[Test]
 				public void SortAndTransformTest()
 				{
@@ -279,7 +288,7 @@ namespace CodeWarsTest
 					Assert.AreEqual("der Geheimdienst", DeutschstundeTask.DerDieDas("Geheimdienst"));
 					Assert.AreEqual("der Ofenkartoffel", DeutschstundeTask.DerDieDas("Ofenkartoffel"));
 					Assert.AreEqual("das Fisch", DeutschstundeTask.DerDieDas("Fisch"));
-					Assert.AreEqual("die Kn�del", DeutschstundeTask.DerDieDas("Kn�del"));
+					Assert.AreEqual("die Knödel", DeutschstundeTask.DerDieDas("Knödel"));
 					Assert.AreEqual("der Leberkaassemmi", DeutschstundeTask.DerDieDas("Leberkaassemmi"));
 				}
 
@@ -501,10 +510,10 @@ namespace CodeWarsTest
 				public void HungarianVowelHarmonyTest()
 				{
 					Assert.AreEqual("ablaknak", HungarianVowelHarmonyTask.Dative("ablak"));
-					Assert.AreEqual("t�k�rnek", HungarianVowelHarmonyTask.Dative("t�k�r"));
+					Assert.AreEqual("tükörnek", HungarianVowelHarmonyTask.Dative("tükör"));
 					Assert.AreEqual("keretnek", HungarianVowelHarmonyTask.Dative("keret"));
 					Assert.AreEqual("otthonnak", HungarianVowelHarmonyTask.Dative("otthon"));
-					Assert.AreEqual("vir�gnak", HungarianVowelHarmonyTask.Dative("vir�g"));
+					Assert.AreEqual("virágnak", HungarianVowelHarmonyTask.Dative("virág"));
 					Assert.AreEqual("tettnek", HungarianVowelHarmonyTask.Dative("tett"));
 					Assert.AreEqual("rokkantnak", HungarianVowelHarmonyTask.Dative("rokkant"));
 					Assert.AreEqual("rossznak", HungarianVowelHarmonyTask.Dative("rossz"));
@@ -712,7 +721,7 @@ namespace CodeWarsTest
 		"Let's go hunt, doo doo doo doo doo doo",
 		"Let's go hunt, doo doo doo doo doo doo",
 		"Let's go hunt!",
-		"Run away,�",
+		"Run away,…",
 		""
 	  }), BabySharkLyricsGeneratorTask.BabySharkLyrics());
 				}
@@ -809,7 +818,7 @@ namespace CodeWarsTest
 				public void TurkishNumbersTest()
 				{
 					int[] exampleInputs = new int[] { 1, 13, 27, 38, 77, 94 };
-					string[] exampleOutputs = new string[] { "bir", "on ��", "yirmi yedi", "otuz sekiz", "yetmi� yedi", "doksan d�rt" };
+					string[] exampleOutputs = new string[] { "bir", "on üç", "yirmi yedi", "otuz sekiz", "yetmiş yedi", "doksan dört" };
 
 					for (int i = 0; i < exampleInputs.Length; i++)
 						Assert.AreEqual(exampleOutputs[i], TurkishNumbersTask.GetTurkishNumber(exampleInputs[i]));
@@ -874,7 +883,7 @@ namespace CodeWarsTest
 					Assert.AreEqual(true, AreThereDoublesTask.DoubleCheck("a b  c"));
 					Assert.AreEqual(false, AreThereDoublesTask.DoubleCheck("a b c d e f g h i h k"));
 					Assert.AreEqual(false, AreThereDoublesTask.DoubleCheck("2020"));
-					Assert.AreEqual(false, AreThereDoublesTask.DoubleCheck("a!@�?#$%^&*()_-+=}]{[|\':;?/>.<,~"));
+					Assert.AreEqual(false, AreThereDoublesTask.DoubleCheck("a!@€?#$%^&*()_-+=}]{[|\':;?/>.<,~"));
 				}
 
 				[Test]
