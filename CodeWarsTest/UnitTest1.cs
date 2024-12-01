@@ -21,6 +21,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void SortAndTransformTest()
+				{
+					Assert.AreEqual("3>c~-3>d~-~d>3-3>d~", SortAndTransformTask.SortTransform(new[] { 51, 62, 73, 84, 95, 100, 99, 126 }));
+      
+				}
+
+				[Test]
 				public void RotateMatrixTest()
 				{
 					int[,] oldMatrix = new int[4, 4]
