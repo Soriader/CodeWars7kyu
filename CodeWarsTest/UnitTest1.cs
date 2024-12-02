@@ -20,6 +20,12 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
+				[Test]
+				public void EverythingIsEvenTest()
+				{
+					Assert.AreEqual(2, EverythingIsEvenTask.EnsureEven(1));
+					Assert.AreEqual(2, EverythingIsEvenTask.EnsureEven(1.356));
+				}
 
 				[Test]
 				public void TemperatureAnalysisTest()
