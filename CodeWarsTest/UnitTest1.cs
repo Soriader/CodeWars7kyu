@@ -21,6 +21,16 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void RetrieveArrayValueByIndexWithDefaultTest()
+				{
+					int[] range = Enumerable.Range(1, 3).ToArray();
+					Assert.AreEqual(2, RetrieveArrayValueByIndexWithDefaultTask.Solution(range, 1, -1));
+					Assert.AreEqual(3, RetrieveArrayValueByIndexWithDefaultTask.Solution(range, -1, -1));
+					Assert.AreEqual(-1, RetrieveArrayValueByIndexWithDefaultTask.Solution(range, -5, -1));
+					Assert.AreEqual(1, RetrieveArrayValueByIndexWithDefaultTask.Solution(range, -3, -1));
+				}
+
+				[Test]
 				public void EverythingIsEvenTest()
 				{
 					Assert.AreEqual(2, EverythingIsEvenTask.EnsureEven(1));
