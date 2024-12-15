@@ -21,6 +21,13 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void ZipItTest()
+				{
+					Assert.AreEqual(new object[] { "1a", "2b", "3c", "4d", "5e" }, ZipItTask.ZipIt(new object[] { 1, 2, 3, 4, 5 }, new object[] { 'a', 'b', 'c', 'd', 'e' }, (c, d) => c + "" + d));
+
+				}
+
+				[Test]
 				public void StringBasicsTest()
 				{
 					Assert.AreEqual(new string[] { "12345" }, StringBasicsTask.GetUserIds("uid12345"));
