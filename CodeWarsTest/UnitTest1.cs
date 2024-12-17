@@ -21,6 +21,23 @@ namespace CodeWarsTest
             public class Tests
 			{
 				[Test]
+				public void TheLazyStartupOfficeTest()
+				{
+					var testInput = new string[][] { new[] { "Bob", "Nora" }, new[] { "Ruby", "Carl" } };
+					Assert.AreEqual(new[] { "Bob", "Nora", "Carl", "Ruby" }, TheLazyStartupOfficeTask.BinRota(testInput));
+
+					testInput = new string[][] { new[] { "Billy" } };
+					Assert.AreEqual(new[] { "Billy" }, TheLazyStartupOfficeTask.BinRota(testInput));
+
+					testInput = new string[][] { new[] { "Billy", "Nancy" } };
+					Assert.AreEqual(new[] { "Billy", "Nancy" }, TheLazyStartupOfficeTask.BinRota(testInput));
+
+					testInput = new string[][] { new[] { "Billy" }, new[] { "Megan" }, new[] { "Aki" }, new[] { "Arun" }, new[] { "Joy" } };
+					Assert.AreEqual(new[] { "Billy", "Megan", "Aki", "Arun", "Joy" }, TheLazyStartupOfficeTask.BinRota(testInput));
+
+				}
+
+				[Test]
 				public void ZipItTest()
 				{
 					Assert.AreEqual(new object[] { "1a", "2b", "3c", "4d", "5e" }, ZipItTask.ZipIt(new object[] { 1, 2, 3, 4, 5 }, new object[] { 'a', 'b', 'c', 'd', 'e' }, (c, d) => c + "" + d));
