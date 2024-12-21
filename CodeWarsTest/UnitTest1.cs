@@ -20,7 +20,14 @@ namespace CodeWarsTest
         {
             public class Tests
 			{
-				[Test]
+                [Test]
+                public void ZeroBalancedArrayTest()
+                {
+                    Assert.AreEqual(false, ZeroBalancedArrayTask.IsZeroBalanced(new List<int> { 3 }));
+                    Assert.AreEqual(true, ZeroBalancedArrayTask.IsZeroBalanced(new List<int> { 0, 0, 0, 0, 0, 0 }));
+                }
+
+                [Test]
 				public void CatsInHatsTest()
 				{
 					Assert.AreEqual("3331148.800", CatsInHatsTask.Height(7));
