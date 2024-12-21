@@ -21,6 +21,12 @@ namespace CodeWarsTest
             public class Tests
 			{
                 [Test]
+                public void LowercaseStringsInArrayTest()
+                {
+                    Assert.AreEqual(new object[] { "red", "green" }, LowercaseStringsInArrayTask.ArrayLowerCase(new object[] { "Red", "Green" }));
+                }
+
+                [Test]
                 public void ZeroBalancedArrayTest()
                 {
                     Assert.AreEqual(false, ZeroBalancedArrayTask.IsZeroBalanced(new List<int> { 3 }));
