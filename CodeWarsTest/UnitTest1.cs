@@ -21,6 +21,23 @@ namespace CodeWarsTest
             public class Tests
 			{
                 [Test]
+                public void YouAreACubeTest()
+                {
+                    Assert.AreEqual(true, YouAreACubeTask.YouAreACube(27));
+                    Assert.AreEqual(true, YouAreACubeTask.YouAreACube(1));
+                    Assert.AreEqual(false, YouAreACubeTask.YouAreACube(2));
+                    Assert.AreEqual(false, YouAreACubeTask.YouAreACube(99));
+                    Assert.AreEqual(true, YouAreACubeTask.YouAreACube(64));
+                }
+
+                [Test]
+                public void FindFactorsOfANumberTest()
+                {
+                    Assert.AreEqual(new int[] { 54, 27, 18, 9, 6, 3, 2, 1 }, FindFactorsOfANumberTask.Factors(54));
+                    Assert.AreEqual(new int[] { 9, 3, 1 }, FindFactorsOfANumberTask.Factors(9));
+                }
+
+                [Test]
                 public void MontyHallProblemTest()
                 {
                     Assert.AreEqual(71, MontyHallProblemTask.MontyHall(1, new int[] { 3, 3, 2, 3, 3, 2, 2, 3, 2, 2, 1, 1, 1, 1 }));
