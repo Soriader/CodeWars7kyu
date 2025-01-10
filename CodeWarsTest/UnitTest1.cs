@@ -21,6 +21,22 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void TIYFizzBuzzTest()
+                {
+                    Assert.That(TIYFizzBuzzTask.FizzBuzz("H"), Is.EqualTo("Iron"));
+
+                    Assert.That(TIYFizzBuzzTask.FizzBuzz("e"), Is.EqualTo("Yard"));
+
+                    Assert.That(TIYFizzBuzzTask.FizzBuzz("l"), Is.EqualTo("l"));
+
+                    Assert.That(TIYFizzBuzzTask.FizzBuzz("O"), Is.EqualTo("Iron Yard"));
+
+                    Assert.That(TIYFizzBuzzTask.FizzBuzz("?"), Is.EqualTo("?"));
+
+                    Assert.That(TIYFizzBuzzTask.FizzBuzz("Hello WORLD!"), Is.EqualTo("IronYardllYard IronIron YardIronIronIron!"));
+                }
+
+                [Test]
                 public void NotAllButSometimesAllTest()
                 {
                     Assert.That(NotAllButSometimesAllTask.Remove("this is a string", new Dictionary<char, int> { { 't', 1 }, { 'i', 2 } }), Is.EqualTo("hs s a string"));
