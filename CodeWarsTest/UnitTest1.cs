@@ -21,6 +21,13 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void YouGotChangeTest()
+                {
+                    Assert.That(YouGotChangeTask.GiveChange(365), Is.EqualTo(new int[] { 0, 1, 1, 0, 1, 3 }));
+                    Assert.That(YouGotChangeTask.GiveChange(217), Is.EqualTo(new int[] { 2, 1, 1, 0, 0, 2 }));
+                }
+
+                [Test]
                 public void OperationsWithSetsTest()
                 {
                     var arr1 = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
