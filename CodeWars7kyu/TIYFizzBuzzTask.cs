@@ -19,19 +19,22 @@ namespace CodeWars7kyu
                 if(char.IsUpper(c) && !upperVovels.Contains(c))
                 {
                     result += "Iron";
+                    continue;
                 }
-                else if (upperVovels.Contains(c))
+
+                if (upperVovels.Contains(c))
                 {
                     result += "Iron Yard";
+                    continue;
                 }
-                else if (lowerVovels.Contains(c))
+
+                if (lowerVovels.Contains(c))
                 {
                     result += "Yard";
+                    continue;
                 }
-                else
-                {
-                    result += c;
-                }
+
+                result += c;
             }
 
             return result;
