@@ -21,6 +21,15 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void TheRobberLanguageTest()
+                {
+                    Assert.AreEqual("hohelollolo wowororloldod", TheRobberLanguageTask.RobberEncode("hello world"));
+                    Assert.AreEqual("cocododinongog isos fofunon", TheRobberLanguageTask.RobberEncode("coding is fun"));
+                    Assert.AreEqual("fofolollolowow tothohe wowhohitote rorabobbobitot", TheRobberLanguageTask.RobberEncode("follow the white rabbit"));
+                    Assert.AreEqual("SOS.O.SOS", TheRobberLanguageTask.RobberEncode("S.O.S"));
+                }
+
+                [Test]
                 public void TIYFizzBuzzTest()
                 {
                     Assert.That(TIYFizzBuzzTask.FizzBuzz("H"), Is.EqualTo("Iron"));
