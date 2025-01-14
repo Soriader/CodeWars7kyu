@@ -21,6 +21,11 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void InertialArrayTest()
+                {
+                    Assert.That(InertialArrayTask.IsInertial(new int[] { 11, 4, 20, 9, 2, 8 }), Is.EqualTo(true));
+                }
+                [Test]
                 public void MythicalHeadsAndTailsTest()
                 {
                     Assert.That(MythicalHeadsAndTailsTask.Beasts(123, 39), Is.EqualTo(new int[] { 24, 15 }));
