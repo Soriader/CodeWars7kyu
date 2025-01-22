@@ -21,6 +21,16 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void FriendsTest()
+                {
+                    //Assert.That(FriendsTask.Friends(0), Is.EqualTo(0));
+                    //Assert.That(FriendsTask.Friends(1), Is.EqualTo(0));
+                    //Assert.That(FriendsTask.Friends(2), Is.EqualTo(0));
+                    Assert.That(FriendsTask.Friends(4), Is.EqualTo(1));
+                    Assert.That(FriendsTask.Friends(2570), Is.EqualTo(11));
+                }
+
+                [Test]
                 public void StonePickaxeCraftingTest()
                 {
                     string[] stringToMinecraftArrayConverter(string s)
