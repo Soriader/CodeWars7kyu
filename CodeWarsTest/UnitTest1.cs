@@ -21,12 +21,26 @@ namespace CodeWarsTest
             public class Tests
             {
                 [Test]
+                public void CenteredPentagonalNumberTest()
+                {
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(0), Is.EqualTo(-1));
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(-1), Is.EqualTo(-1));
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(-21), Is.EqualTo(-1));
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(1), Is.EqualTo(1));
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(2), Is.EqualTo(6));
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(8), Is.EqualTo(141));
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(10), Is.EqualTo(226));
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(100), Is.EqualTo(24751));
+                    Assert.That(CenteredPentagonalNumberTask.Pentagonal(77686), Is.EqualTo(15087592276));
+                }
+
+                [Test]
                 public void FriendsTest()
                 {
-                    //Assert.That(FriendsTask.Friends(0), Is.EqualTo(0));
-                    //Assert.That(FriendsTask.Friends(1), Is.EqualTo(0));
-                    //Assert.That(FriendsTask.Friends(2), Is.EqualTo(0));
-                    Assert.That(FriendsTask.Friends(4), Is.EqualTo(1));
+					Assert.That(FriendsTask.Friends(0), Is.EqualTo(0));
+					Assert.That(FriendsTask.Friends(1), Is.EqualTo(0));
+					Assert.That(FriendsTask.Friends(2), Is.EqualTo(0));
+					Assert.That(FriendsTask.Friends(4), Is.EqualTo(1));
                     Assert.That(FriendsTask.Friends(2570), Is.EqualTo(11));
                 }
 
