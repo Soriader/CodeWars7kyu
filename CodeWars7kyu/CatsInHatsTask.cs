@@ -13,13 +13,14 @@ namespace CodeWars7kyu
 		{
 			double currentCat = 2000000.000;
 			double totalHeigth = 0;
-			int iterator = 0;
-			while (iterator <= n)
+			int i = 0;
+			while (i <= n)
 			{
 				totalHeigth += currentCat;
 				currentCat /= 2.5;
-				iterator++;
+				i++;
 			}
+
 			return totalHeigth.ToString("F3");
 		}
 	}
