@@ -2,7 +2,6 @@
 
 using CodeWars7kyu;
 
-
 public class MakeAPlayer
 {
     [Test]
