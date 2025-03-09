@@ -20,6 +20,7 @@ public class SymbolsCountedTask
         
         string result = "";
         string isUsed = "";
+        
 
         foreach (var x in s)
         {
